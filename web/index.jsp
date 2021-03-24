@@ -12,6 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Te me cuidas</h1>
+        <div>
+            <img src="" alt="">
+        </div>
     </body>
 </html>
