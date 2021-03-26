@@ -1,5 +1,5 @@
 
-package Conexion;
+package Config;
 
 import java.sql.*;
 

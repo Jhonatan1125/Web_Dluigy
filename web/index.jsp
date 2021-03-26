@@ -12,9 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Te me cuidas</h1>
+        <h1>Pagina de inicio</h1>
         <div>
-            <img src="" alt="">
+            <a href="Controlador_Usuario?accion=listar">Listar Usuario</a>
         </div>
     </body>
 </html>
