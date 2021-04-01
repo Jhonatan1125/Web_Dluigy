@@ -1,9 +1,3 @@
-<%-- 
-    Document   : add
-    Created on : 25/03/2021, 12:52:19 PM
-    Author     : JHsan
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

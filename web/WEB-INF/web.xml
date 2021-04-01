@@ -4,9 +4,25 @@
         <servlet-name>Controlador_Usuario</servlet-name>
         <servlet-class>Controlador.Controlador_Usuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controlador_Login</servlet-name>
+        <servlet-class>Controlador.Controlador_Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Guardar</servlet-name>
+        <servlet-class>Controlador.Guardar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador_Usuario</servlet-name>
         <url-pattern>/Controlador_Usuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador_Login</servlet-name>
+        <url-pattern>/Sesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Guardar</servlet-name>
+        <url-pattern>/Guardar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
