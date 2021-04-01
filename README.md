@@ -29,7 +29,7 @@ https://www.youtube.com/watch?v=D3HER9EGQSI
 - Copiar y Pegar esto:
 
 
-
+```
 package Interfaces;
 import Modelo.Nombretabla;
 import java.util.List;
@@ -39,7 +39,7 @@ public interface NombretablaCRUD {
     public boolean add(nombretabla var);
     public boolean eliminar(nombretabla var);
 }
-
+```
 
 
 -  Clic derecho y luego darle en format y cambiar los valores donde se indica :) 
@@ -54,9 +54,7 @@ public interface NombretablaCRUD {
 -  Conexion cn=new Conexion();Connection con;PreparedStatement ps;ResultSet rs;Nombretabla ent=new Nombretabla();
 -  Clic derecho y format, darle en la bombilla e importar y por ultimo cambiar Nombretabla
 -  Copiar y Pegar esto dentro de listar(No tiene que haber nada dentro de los corchetes)
-
-
-
+```
 ArrayList<Nombretabla>list=new ArrayList<>();
         String sql="Select * from Nombretabla ";
         try {
@@ -72,3 +70,4 @@ ArrayList<Nombretabla>list=new ArrayList<>();
             System.out.println("Error "+e);
         }
         return list;
+```
