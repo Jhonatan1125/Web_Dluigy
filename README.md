@@ -27,7 +27,7 @@ https://www.youtube.com/watch?v=D3HER9EGQSI
 4.Crear en la carpeta interfaces un archivo java-interface(NombretablaCRUD primera letra en mayuscula)
 -
 - Copiar y Pegar esto:
--  package Interfaces;
+package Interfaces;
 import Modelo.Nombretabla;
 import java.util.List;
 public interface NombretablaCRUD {
