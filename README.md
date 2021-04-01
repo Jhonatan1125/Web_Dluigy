@@ -27,6 +27,7 @@ https://www.youtube.com/watch?v=D3HER9EGQSI
 4.Crear en la carpeta interfaces un archivo java-interface(NombretablaCRUD primera letra en mayuscula)
 -
 - Copiar y Pegar esto:
+
 package Interfaces;
 import Modelo.Nombretabla;
 import java.util.List;
@@ -49,7 +50,7 @@ public interface NombretablaCRUD {
 -  Conexion cn=new Conexion();Connection con;PreparedStatement ps;ResultSet rs;Nombretabla ent=new Nombretabla();
 -  Clic derecho y format, darle en la bombilla e importar y por ultimo cambiar Nombretabla
 -  Copiar y Pegar esto dentro de listar(No tiene que haber nada dentro de los corchetes)
--  ArrayList<Nombretabla>list=new ArrayList<>();
+ArrayList<Nombretabla>list=new ArrayList<>();
         String sql="Select * from Nombretabla ";
         try {
             con=cn.getConnection();
