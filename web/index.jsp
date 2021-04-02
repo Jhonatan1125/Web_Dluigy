@@ -15,6 +15,7 @@
         <h1>Pagina de inicio</h1>
         <div>
             <a href="Controlador_Usuario?accion=listar">Listar Usuario</a><br>
+            <a href="Controlador_Rol?accion=listar">Listar Rol</a><br>
             <a href="Login.jsp">Iniciar Sesion</a><br>
             <a href="registro.jsp">Registrarse</a><br>
         </div>

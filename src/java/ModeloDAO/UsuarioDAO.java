@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ModeloDAO;
 
 import Config.Conexion;
@@ -14,10 +9,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author JHsan
- */
+
 public class UsuarioDAO implements UsuarioCRUD{
     Conexion cn=new Conexion();
     Connection con;
