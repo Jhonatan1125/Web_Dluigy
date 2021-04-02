@@ -47,6 +47,7 @@ public interface NombretablaCRUD {
     public List listar();
     public Nombretabla list(int id);
     public boolean add(nombretabla var);
+    public boolean edit(nombretabla var);
     public boolean eliminar(nombretabla var);
 }
 ```
@@ -120,7 +121,7 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
 
 6.Dentro de la carpeta Controlador se crea un archivo Servlet y se selecciona el cuadro de add information(Controlador_Nombretabla la primera en mayus)
 -
--  debajo del public class declarar estas variables  y cambiar donde dice Nombretabla 
+-  debajo del public class declarar estas variables y tambien los campos de su tabla para mas adelante (cambiar donde dice Nombretabla) 
 ```
     String listar = "Vistas/Vista_Nombretabla/Listar.jsp";
     String add = "Vistas/Vista_Nombretabla/add.jsp";
@@ -177,12 +178,13 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
 ```
 <tbody>
  <tr>
-     <td><%= tab.getIdRol() %></td>
-     <td><%= tab.getNom_Rol() %></td>
-     <td><%= tab.getDescripcion() %></td>
+     //id de primeras
+     <td><%= tab.getCampo1() %></td>// este campo se copia y pega abajo en editar y eliminar
+     <td><%= tab.getCampo2() %></td>
+     <td><%= tab.getCampo3() %></td>
      <td>
-        <a>Editar</a>
-        <a>Eliminar</a>
+        <a href="Controlador_Nombretabla?accion=editar&id=<%= tab.getCampo1() %>">Editar</a>
+        <a href="Controlador_Nombretabla?accion=eliminar&id=<%= tab.getCampo1() %>Eliminar</a>
      </td>
    </tr>
   <%}%>
@@ -240,4 +242,83 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
 ```
 - Cuidado con los puntos y las comas porque aqui es donde mas sale error despues
 
+9.Dentro de Agregar en doGet se coloca solo el nombre de la variable sin decir que tipo es porque arriba del todo, debajo de class ya se declararon como se meciona en el punto -->6
+-
+-  Dentro de los getsparameter("") se coloca tal cual se escribio en los name="" en vista add.jsp 
 
+10.En vistas ir al archivo de edit.jsp
+-
+-Borrar todo y copiar y pegar esto:
+```
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Editar Nombretabla</title>
+    </head>
+    <body>
+        <div>
+            <%
+                    NombretablaDAO dao = new NombretablaDAO();
+                    int id = Integer.parseInt((String) request.getAttribute("idper"));
+                    Nombretabla u = (Nombretabla) dao.list(id);
+                %>
+            <h1>Editar Nombretabla</h1>
+            //El primer campo que sea el id y el type="text"
+            <form action="Controlador_Nombretabla">
+                <label for="">Campo1</label>
+                <input type="text" name="txtNombretabla" value="<%=  %>"><br>
+                <label for="">Campo2</label>
+                <input type="text" name="txtNombretabla" value="<%=  %>"><br>
+                <label for="">Campo 3</label>
+                <input type="text" name="txtNombretabla" value="<%=  %>"><br>
+
+                <input type="submit" name="accion" value="Actualizar">
+                <a href="Controlador_Nombretabla?accion=listar">Regresar</a>
+            </form>
+        </div>
+    </body>
+</html>
+```
+-  Solo cambiar Nombretabla
+
+11.Ir a la carpeta ModeloDAO, luego al archivo NombretablaDAO y dentro de list 
+-
+- Borrar lo que este dentro y copiar y pegar esto:
+```
+  String sql="Select * from Nombretabla where IDtabla="+id;
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            rs=ps.executeQuery();
+            while (rs.next()) {
+            //en el video la variable es p aqui es ent
+            /*Ejemplo   
+            ent.setIdRol(rs.getInt("IdRol"));
+            ent.setNom_Rol(rs.getString("Nom_Rol"));
+            ent.setDescripcion(rs.getString("Descripcion"));
+            */
+            }
+        } catch (Exception e) {
+            
+        }
+        return p;
+  ```
+  
+  12.Mas abajo vamos a edit
+  -
+  -  borrar todo lo que dice en edit, luego Copiar y pegar esto:
+  
+  ```
+       //en esta parte no se coloca el campoid
+       String sql="update Nombretabla set campo2='"+var.getcampo2()+"',campo3='"+var.getcampo3()+"'where campo1ID='"+var.getcampo1ID();
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error: "+e);
+        }
+        return false;
+ ```
