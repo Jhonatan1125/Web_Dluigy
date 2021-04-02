@@ -27,6 +27,11 @@ https://www.youtube.com/watch?v=D3HER9EGQSI
 -  Declarar cada tipo de variable (int,String,Date) y de nombre colocar el mismo que el de la tabla
 -  Con "Alt+insert o clic derecho" seleccionar constructor primero darle generar sin seleccionar ningun campo y luego repetir el proceso pero ahora seleccionando todo menos la llave primaria 
 -  Con "Alt+insert" seleccionar getter y setter y seleccionar todos los campos y luego generar
+-  Encima de la etiqueta table colocar esto:
+```
+<h1>Listado de Nombretabla</h1>
+<a href="Controlador_Nombretabla?accion=add">Agregar Nuevo</a><br>
+```
 
 4.Crear en la carpeta interfaces un archivo java-interface(NombretablaCRUD primera letra en mayuscula)
 -
@@ -182,3 +187,58 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
   <%}%>
  </tbody>
 ```
+-  y hasta aqui va lo de listar
+
+8.Ir a add.jsp de la vista que crearon
+-
+-  Borran todo y copian y pegan esto:
+```
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Añadir -->Nombretabla</title>
+    </head>
+    <body>
+        <div>
+            <h1>Añadir Nombretabla</h1>
+            <form action="Controlador_-->Nombretabla">
+            /* aca se pone los campos necesarios para rellenar de el formulario de su tabla 
+               Ojo aqui porque tiene que recordar que nombre le colocaron en cada input
+               y si quieren no es necesario colocar el campo del id de su tabla porque mysql lo hace automatico
+            */
+            //EJEMPLO
+                <label for="">Nombre Rol</label>
+                <input type="text" name="Si quieren pueden colocar txtNombretabla pa que sea facil"><br>
+                <label for="Rol">Descripcion</label>
+                <input type="text" name="txtDescripcion"><br>
+
+                <input type="submit" name="accion" value="Agregar">
+            </form>
+        </div>
+    </body>
+</html>
+```
+
+8.Ir a la carpeta ModeloDAO y entrar al archivo NombretablaDAO
+-
+- borrar lo que este dentro de add colocar esto:
+```
+//El en el video es per aqui es var
+/*No es necesario colocar el campo del id porque es automatico y mysql lo coloca solo*/
+ String sql="insert into Nombretabla(Nombrecampo1,NombreCampo2,..)values('"+var.getNombrecampo1()+"','"+var.getNombrecampo2()+"','"+var.get..()+"')";
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error: "+e);
+        }
+        return false;
+```
+- Cuidado con los puntos y las comas porque aqui es donde mas sale error despues
+
+9.Ir a la carpeta Controlador y luego al archivo Controlador_Nombretabla
+-
+-  
