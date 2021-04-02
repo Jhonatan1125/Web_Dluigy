@@ -51,7 +51,7 @@ public interface NombretablaCRUD {
 5.Crear en la carpeta ModeloDAO un archivo javaclass(NombretablaDAO primera letra en mayuscula)
 -
 -  Agregar el metodo implements (public class Nombretabla implements NombretablaCRUD {)
--  Dar clic derecho en la bombilla de error y darle en importar interfaces.Nombretabla
+-  Dar clic derecho en la bombilla de error y darle en importar interfaces.NombretablaCRUD
 -  Luego dar clic izquierdo en la bombilla de error y darle en implemet all abstract
 
 -  Copiar y Pegar esto debajo de public class:
