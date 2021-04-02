@@ -6,6 +6,7 @@ import Modelo.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,8 +80,8 @@ public class UsuarioDAO implements UsuarioCRUD{
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
-        } catch (Exception e) {
-            
+        } catch (SQLException e) {
+            System.out.println("Error: "+e);
         }
         return false;
     }
@@ -92,7 +93,7 @@ public class UsuarioDAO implements UsuarioCRUD{
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             
         }
         return false;

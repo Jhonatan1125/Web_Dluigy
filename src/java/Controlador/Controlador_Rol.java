@@ -17,7 +17,7 @@ public class Controlador_Rol extends HttpServlet {
     String edit = "Vistas/Vista_Rol/edit.jsp";
     Rol u = new Rol();
     RolDAO dao = new RolDAO();
-
+    int idCap;
     int IdRol;
     String Nom_Rol;
     String Descripcion;
@@ -46,8 +46,35 @@ public class Controlador_Rol extends HttpServlet {
         String action = request.getParameter("accion");
         if (action.equalsIgnoreCase("listar")) {
             acceso = listar;
+        } else if (action.equalsIgnoreCase("add")) {
+            acceso = add;
+        } else if (action.equalsIgnoreCase("Agregar")) {
+            Nom_Rol = request.getParameter("txtNom_Rol");
+            Descripcion = request.getParameter("txtDescripcion");
+            u.setNom_Rol(Nom_Rol);
+            u.setDescripcion(Descripcion);
+            dao.add(u);
+            acceso = listar;
+        } else if (action.equalsIgnoreCase("editar")) {
+            request.setAttribute("IDFun", request.getParameter("id"));
+            acceso = edit;
+        } else if (action.equalsIgnoreCase("Actualizar")) {
+            idCap = Integer.parseInt(request.getParameter("txtIdRol"));
+            Nom_Rol = request.getParameter("txtNom_Rol");
+            Descripcion = request.getParameter("txtDescripcion");
+            u.setIdRol(idCap);
+            u.setNom_Rol(Nom_Rol);
+            u.setDescripcion(Descripcion);
+            dao.edit(u);
+            acceso = listar;
+        }else if (action.equalsIgnoreCase("eliminar")){
+        idCap=Integer.parseInt(request.getParameter("id"));
+        u.setIdRol(idCap);
+        dao.eliminar(idCap);
+        acceso=listar;
         }
-        RequestDispatcher vista=request.getRequestDispatcher(acceso);
+
+        RequestDispatcher vista = request.getRequestDispatcher(acceso);
         vista.forward(request, response);
     }
 

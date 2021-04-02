@@ -20,38 +20,81 @@ public class RolDAO implements RolCRUD {
 
     @Override
     public List listar() {
-        ArrayList<Rol>list=new ArrayList<>();
-        String sql="Select * from Rol";
+        ArrayList<Rol> list = new ArrayList<>();
+        String sql = "Select * from Rol";
         try {
-            con=cn.getConnection();
-            ps=con.prepareStatement(sql);
-            rs=ps.executeQuery();
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
             while (rs.next()) {
-                Rol tab=new Rol();
+                Rol tab = new Rol();
                 tab.setIdRol(rs.getInt("IdRol"));
                 tab.setNom_Rol(rs.getString("Nom_Rol"));
                 tab.setDescripcion(rs.getString("Descripcion"));
                 list.add(tab);
             }
         } catch (SQLException e) {
-            System.out.println("Error "+e);
+            System.out.println("Error " + e);
         }
         return list;
     }
 
     @Override
     public Rol list(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "Select * from Rol where IdRol="+id;
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                ent.setIdRol(rs.getInt("IdRol"));
+                ent.setNom_Rol(rs.getString("Nom_Rol"));
+                ent.setDescripcion(rs.getString("Descripcion"));
+            }
+        } catch (SQLException e) {
+        }
+        return ent;
+
     }
 
     @Override
-    public boolean add(Rol var) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean add(Rol var) {//en el video es per aqui es var
+        String sql = "insert into Rol(Nom_Rol,Descripcion)values('" + var.getNom_Rol() + "','" + var.getDescripcion() + "')";
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+        }
+        return false;
     }
 
     @Override
-    public boolean eliminar(Rol var) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean edit(Rol var) {
+        //en esta parte no se coloca el campoid
+        String sql = "update Rol set Nom_Rol='" + var.getNom_Rol() + "',Descripcion='" + var.getDescripcion() + "' where IdRol=" + var.getIdRol();
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean eliminar(int id) {
+        String sql="delete from Rol where IdRol="+id;
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+        }
+        return false;
     }
 
 }

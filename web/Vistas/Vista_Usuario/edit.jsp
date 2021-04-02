@@ -1,9 +1,3 @@
-<%-- 
-    Document   : edit
-    Created on : 25/03/2021, 12:52:10 PM
-    Author     : JHsan
---%>
-
 <%@page import="Modelo.Usuario"%>
 <%@page import="ModeloDAO.UsuarioDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

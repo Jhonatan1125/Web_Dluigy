@@ -10,6 +10,8 @@ public interface RolCRUD {
     public Rol list(int id);
 
     public boolean add(Rol var);
-
-    public boolean eliminar(Rol var);
+    
+    public boolean edit(Rol var);
+    
+    public boolean eliminar(int id);
 }

@@ -16,6 +16,8 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <h1>Listado de Roles</h1>
+        <a href="Controlador_Rol?accion=add">Agregar Nuevo</a><br>
         <table border="1">
             <thead>
                 <tr>
@@ -39,8 +41,8 @@
                     <td><%= tab.getNom_Rol() %></td>
                     <td><%= tab.getDescripcion() %></td>
                     <td>
-                        <a>Editar</a>
-                        <a>Eliminar</a>
+                        <a href="Controlador_Rol?accion=editar&id=<%= tab.getIdRol() %>">Editar</a>
+                        <a href="Controlador_Rol?accion=eliminar&id=<%= tab.getIdRol() %>">Eliminar</a>
                     </td>
                 </tr>
                 <%}%>
