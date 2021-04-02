@@ -349,3 +349,17 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
         }
         return false;
  ```
+13.Mas abajo en eliminar
+-
+-borrar todo lo que este dentro de eliminar, luego copiar y pegar esto
+ 
+```
+String sql="delete from Nombretabla where Campo1ID="+id;
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+        }
+```
