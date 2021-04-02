@@ -240,6 +240,4 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
 ```
 - Cuidado con los puntos y las comas porque aqui es donde mas sale error despues
 
-9.Ir a la carpeta Controlador y luego al archivo Controlador_Nombretabla
--
--  
+
