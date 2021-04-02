@@ -48,7 +48,7 @@ public interface NombretablaCRUD {
     public Nombretabla list(int id);
     public boolean add(nombretabla var);
     public boolean edit(nombretabla var);
-    public boolean eliminar(nombretabla var);
+    public boolean eliminar(int id);
 }
 ```
 
@@ -62,7 +62,13 @@ public interface NombretablaCRUD {
 -  Luego dar clic izquierdo en la bombilla de error y darle en implemet all abstract
 
 -  Copiar y Pegar esto debajo de public class:
--  Conexion cn=new Conexion();Connection con;PreparedStatement ps;ResultSet rs;Nombretabla ent=new Nombretabla();
+```
+Conexion cn=new Conexion();
+Connection con;
+PreparedStatement ps;
+ResultSet rs;
+Nombretabla ent=new Nombretabla();
+```
 -  Clic derecho y format, darle en la bombilla e importar y por ultimo cambiar Nombretabla
 -  Copiar y Pegar esto dentro de listar(No tiene que haber nada dentro de los corchetes de listar)
 ```
@@ -129,7 +135,8 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
     Nombretabla u = new Nombretabla();
     NombretablaDAO dao = new NombretablaDAO();
     
-    /* Variables de la tabla Usuario 
+    /* debajo colocar las varibales de los campos con el tipo
+    EJEMPLO
     int id;
     int IdRol;
     String P_nombre;
@@ -144,17 +151,37 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
 ```
 
 -   Hay que darle en el signo de mas (+) en la linea 47 para ver lo de DoGet porque el man del video no especifica
--   El doGet se veria asi y no hay que hacer ningun cambio por ahora
+-   El doGet copiar y pegar esto mas adelante en el video se explica que colocar en cada uno
 ```
- @Override
+@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+            
         String acceso = "";
         String action = request.getParameter("accion");
         if (action.equalsIgnoreCase("listar")) {
             acceso = listar;
+        } else if (action.equalsIgnoreCase("add")) {
+            acceso = add;
+        } else if (action.equalsIgnoreCase("Agregar")) {
+            
+            dao.add(u);
+            acceso = listar;
+        } else if (action.equalsIgnoreCase("editar")) {
+            request.setAttribute("IDFun", request.getParameter("id"));
+            acceso = edit;
+        } else if (action.equalsIgnoreCase("Actualizar")) {
+            
+            dao.edit(u);
+            acceso = listar;
+        }else if (action.equalsIgnoreCase("eliminar")){
+        idCap=Integer.parseInt(request.getParameter("id"));
+        -->u.setCampo1ID(idCap);
+        dao.eliminar(idCap);
+        acceso=listar;
         }
-        RequestDispatcher vista=request.getRequestDispatcher(acceso);
+
+        RequestDispatcher vista = request.getRequestDispatcher(acceso);
         vista.forward(request, response);
     }
 ```
@@ -184,7 +211,7 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
      <td><%= tab.getCampo3() %></td>
      <td>
         <a href="Controlador_Nombretabla?accion=editar&id=<%= tab.getCampo1() %>">Editar</a>
-        <a href="Controlador_Nombretabla?accion=eliminar&id=<%= tab.getCampo1() %>Eliminar</a>
+        <a href="Controlador_Nombretabla?accion=eliminar&id=<%= tab.getCampo1() %>">Eliminar</a>
      </td>
    </tr>
   <%}%>
@@ -261,7 +288,7 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
         <div>
             <%
                     NombretablaDAO dao = new NombretablaDAO();
-                    int id = Integer.parseInt((String) request.getAttribute("idper"));
+                    int id = Integer.parseInt((String) request.getAttribute("IDFun"));
                     Nombretabla u = (Nombretabla) dao.list(id);
                 %>
             <h1>Editar Nombretabla</h1>
@@ -311,8 +338,8 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
   -  borrar todo lo que dice en edit, luego Copiar y pegar esto:
   
   ```
-       //en esta parte no se coloca el campoid
-       String sql="update Nombretabla set campo2='"+var.getcampo2()+"',campo3='"+var.getcampo3()+"'where campo1ID='"+var.getcampo1ID();
+       //en esta parte no se actualiza el campoid
+       String sql="update Nombretabla set campo2='"+var.getcampo2()+"',campo3='"+var.getcampo3()+"'where campo1ID="+var.getcampo1ID();
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
