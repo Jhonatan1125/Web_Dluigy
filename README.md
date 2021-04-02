@@ -21,17 +21,18 @@ https://www.youtube.com/watch?v=D3HER9EGQSI
 2.Crear la tabla dentro de Listar.jsp
   -
 -  Con "Ctrl+espacio" crear table de Rows (1) y Columns (Nº campos de la tabla + 1 para opciones), luego colocar en "th" los titulos de cada campo
+-  Encima de la etiqueta table colocar esto:
+```
+<h1>Listado de Nombretabla</h1>
+<a href="Controlador_Nombretabla?accion=add">Agregar Nuevo</a><br>
+```
 
 3.Crear en la carpeta modelo un archivo javaclass(Nombretabla.java primera letra en Mayus)
 -
 -  Declarar cada tipo de variable (int,String,Date) y de nombre colocar el mismo que el de la tabla
 -  Con "Alt+insert o clic derecho" seleccionar constructor primero darle generar sin seleccionar ningun campo y luego repetir el proceso pero ahora seleccionando todo menos la llave primaria 
 -  Con "Alt+insert" seleccionar getter y setter y seleccionar todos los campos y luego generar
--  Encima de la etiqueta table colocar esto:
-```
-<h1>Listado de Nombretabla</h1>
-<a href="Controlador_Nombretabla?accion=add">Agregar Nuevo</a><br>
-```
+
 
 4.Crear en la carpeta interfaces un archivo java-interface(NombretablaCRUD primera letra en mayuscula)
 -
