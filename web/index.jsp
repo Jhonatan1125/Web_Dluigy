@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 24/03/2021, 05:58:07 PM
-    Author     : jorda
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
