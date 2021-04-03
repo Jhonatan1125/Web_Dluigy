@@ -13,6 +13,7 @@
             <a href="Controlador_Fidelizacion?accion=listar">Listar Fidelizacion</a><br>
             <a href="Controlador_Cliente?accion=listar">Listar Cliente</a><br>
             <a href="Controlador_Categoria?accion=listar">Listar Categoria</a><br>
+            <a href="Controlador_Recibo?accion=listar">Listar Recibo</a><br>
             <a href="Login.jsp">Iniciar Sesion</a><br>
             <a href="registro.jsp">Registrarse</a><br>
         </div>
