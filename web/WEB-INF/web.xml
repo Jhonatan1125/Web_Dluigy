@@ -24,6 +24,10 @@
         <servlet-name>Controlador_Cliente</servlet-name>
         <servlet-class>Controlador.Controlador_Cliente</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controlador_Categoria</servlet-name>
+        <servlet-class>Controlador.Controlador_Categoria</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador_Usuario</servlet-name>
         <url-pattern>/Controlador_Usuario</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>Controlador_Cliente</servlet-name>
         <url-pattern>/Controlador_Cliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador_Categoria</servlet-name>
+        <url-pattern>/Controlador_Categoria</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
