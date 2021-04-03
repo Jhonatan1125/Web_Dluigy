@@ -16,6 +16,10 @@
         <servlet-name>Controlador_Rol</servlet-name>
         <servlet-class>Controlador.Controlador_Rol</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controlador_Fidelizacion</servlet-name>
+        <servlet-class>Controlador.Controlador_Fidelizacion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador_Usuario</servlet-name>
         <url-pattern>/Controlador_Usuario</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>Controlador_Rol</servlet-name>
         <url-pattern>/Controlador_Rol</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador_Fidelizacion</servlet-name>
+        <url-pattern>/Controlador_Fidelizacion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
