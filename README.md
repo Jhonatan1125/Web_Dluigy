@@ -137,7 +137,7 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
     
     /* debajo colocar las varibales de los campos con el tipo
     EJEMPLO
-    int id;
+    int idCap;
     int IdRol;
     String P_nombre;
     String S_nombre;
