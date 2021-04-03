@@ -272,7 +272,10 @@ ArrayList<-->Nombretabla>list=new ArrayList<>();
 9.Dentro de Agregar en doGet se coloca solo el nombre de la variable sin decir que tipo es porque arriba del todo, debajo de class ya se declararon como se meciona en el punto -->6
 -
 -  Dentro de los getsparameter("") se coloca tal cual se escribio en los name="" en vista add.jsp 
-
+```
+/*Para tipos Date*/
+Nombrecampo = Date.valueOf(request.getParameter(""));
+```
 10.En vistas ir al archivo de edit.jsp
 -
 -Borrar todo y copiar y pegar esto:
