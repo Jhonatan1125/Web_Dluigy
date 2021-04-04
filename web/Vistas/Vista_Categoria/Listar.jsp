@@ -24,7 +24,7 @@
                     <th>OPCIONES</th>
                 </tr>
             </thead>
-            <%
+            <% 
                 CategoriaDAO dao = new CategoriaDAO();
                 List<Categoria> list = dao.listar();
                 Iterator<Categoria> iter = list.iterator();
