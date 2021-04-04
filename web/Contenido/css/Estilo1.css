@@ -1,0 +1,179 @@
+/*
+/////
+/////
+/////
+///// Cuerpo del HTML (BODY)
+/////
+/////
+/////
+*/
+
+form{
+  display: flex;
+  flex-flow: column;
+  color:rgba(0,0,0,0.6);
+  background: white;
+  width: 95%;
+  height: 50%;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow:rgba(0, 0, 0, 8) 0px 0px 20px;
+  border-radius: 10px;
+}
+input,textarea{
+  border: none;
+  resize: none;
+  outline:none;
+  background:none;
+  padding: 15px 0px;
+  width: 80%;
+  margin: 20px;
+  transition: all 300ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+input:focus, textarea:focus{
+  border-bottom-color: aqua;
+  transition: 0.5s;
+}
+.btn-grad{
+  border: none;
+  outline: none;
+  padding: 15px;
+  width: 250px;
+  color: white;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.7);
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: all 300ms;
+  background: rgba(0,212,255,1)
+  
+}
+.btn-grad:hover{
+  transform: scale(1.05);
+  box-shadow:rgba(0, 0, 0, 9) 0 0 0 2px;
+}
+/* posicion cuadro container */
+.containerp1{
+  width: 50%;
+  height: 500px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right:10px;
+}
+
+.containerp2{
+  display:flex;
+  width: 49%;
+  height: 10%;
+  background:none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 1050px;
+
+}
+/* posicion imagen*/
+.carouselslide{
+  width: 900px;
+  height: 900px;
+  margin-right: 1px;
+  margin-top:500px;
+  border-radius: 2px;
+}
+body{
+  background: #FFF;
+}
+
+h1{font-size: 66px; font-weight: 600; line-height: 80px;}
+h2{font-size: 48px; margin-bottom: 30px;}
+
+p{
+  font-size: 18px;
+  color: #b6b6b6;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+section{
+  padding: 120px 0;
+}
+
+#objetivo{
+  background-color: #c7c7c7;
+}
+
+#objetivo p{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+#objetivo h2{
+  color: white;
+}
+
+#trabajamos{
+  background-color: white;
+  background-image: url('../Imagenes/Body/Fondo3.jpg');
+  background-size: cover;
+  min-height: 400px;
+}
+
+#trabajamos h1{
+  color: white;
+}
+
+#trabajamos p{
+  color: white;
+  font-size: 35px;
+}
+
+.Imagenes-medianas{
+  width: 350px;
+  height: 300px;
+}
+
+.margen{
+  margin-top: 40px;
+}
+
+.video-fluid{
+width: 100%;
+height: 100%;
+}
+#contactenos{
+  background-image: url('../Imagenes/Body/Fondo4.jpg');
+  min-height: 800px;
+}
+
+#contactenos p{
+  font-size: 40px;
+  color: white; 
+}
+
+#contactenos h2{
+  color: white;
+}
+
+.margen-contactenos{
+  margin-top: 100px;
+}
+
+
+.contenido-central{
+  max-width: 800px;
+  /*top - right - bottom - lef*/
+  margin: auto;
+  text-align: center;
+}
+
+.mapa{
+  width: 100%;
+  height: 600px;
+}
+

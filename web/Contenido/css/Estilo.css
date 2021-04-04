@@ -1,0 +1,101 @@
+/*
+/////
+/////
+/////
+///// Cuerpo del HTML (BODY)
+/////
+/////
+/////
+*/
+body{
+  background: #FFF;
+}
+
+h1{font-size: 66px; font-weight: 600; line-height: 80px;}
+h2{font-size: 48px; margin-bottom: 30px;}
+
+p{
+  font-size: 18px;
+  color: #b6b6b6;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+section{
+  padding: 120px 0;
+}
+
+#objetivo{
+  background-color: #c7c7c7;
+}
+
+#objetivo p{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+#objetivo h2{
+  color: white;
+}
+
+#trabajamos{
+  background-color: white;
+  background-image: url('img/Body/Fondo3.jpg');
+  background-size: cover;
+  min-height: 400px;
+}
+
+#trabajamos h1{
+  color: white;
+}
+
+#trabajamos p{
+  color: white;
+  font-size: 35px;
+}
+
+.Imagenes-medianas{
+  width: 350px;
+  height: 300px;
+}
+
+.margen{
+  margin-top: 40px;
+}
+
+.video-fluid{
+width: 100%;
+height: 100%;
+}
+#contactenos{
+  background-image: url('img/Body/Fondo4.jpg');
+  min-height: 800px;
+}
+
+#contactenos p{
+  font-size: 40px;
+  color: white; 
+}
+
+#contactenos h2{
+  color: white;
+}
+
+.margen-contactenos{
+  margin-top: 100px;
+}
+
+
+.contenido-central{
+  max-width: 800px;
+  /*top - right - bottom - lef*/
+  margin: auto;
+  text-align: center;
+}
+
+.mapa{
+  width: 100%;
+  height: 600px;
+}
+

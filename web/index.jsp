@@ -9,18 +9,16 @@
         <link href="Contenido/css/Estilo-Pri.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <jsp:include page="Menu.jsp" />
+        <jsp:include page="Header.jsp" />
         <h1>Pagina de inicio</h1>
         <div>
-            <a href="Controlador_Usuario?accion=listar">Listar Usuario</a><br>
-            <a href="Controlador_Rol?accion=listar">Listar Rol</a><br>
-            <a href="Controlador_Fidelizacion?accion=listar">Listar Fidelizacion</a><br>
-            <a href="Controlador_Cliente?accion=listar">Listar Cliente</a><br>
-            <a href="Controlador_Categoria?accion=listar">Listar Categoria</a><br>
-            <a href="Controlador_Recibo?accion=listar">Listar Recibo</a><br>
-            <a href="Controlador_Vendedor?accion=listar">Listar Vendedor</a><br>
-            <a href="Login.jsp">Iniciar Sesion</a><br>
-            <a href="registro.jsp">Registrarse</a><br>
+            <a href="Controlador_Usuario?accion=listar">Listar Usuario</a><br><br>
+            <a href="Controlador_Rol?accion=listar">Listar Rol</a><br><br>
+            <a href="Controlador_Fidelizacion?accion=listar">Listar Fidelizacion</a><br><br>
+            <a href="Controlador_Cliente?accion=listar">Listar Cliente</a><br><br>
+            <a href="Controlador_Categoria?accion=listar">Listar Categoria</a><br><br>
+            <a href="Controlador_Recibo?accion=listar">Listar Recibo</a><br><br>
+            <a href="Controlador_Vendedor?accion=listar">Listar Vendedor</a><br><br>
         </div>
         <jsp:include page="Footer.jsp" />
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

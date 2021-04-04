@@ -1,0 +1,24 @@
+/*
+/////
+/////
+/////
+///// Cuerpo del HTML (BODY)
+/////
+/////
+/////
+*/
+body{
+  background:white;
+  padding: 0px;
+  margin: 0px;
+  font-family:"Arial"
+}
+.containerz{
+  margin: 0%;
+  width: 100%;
+  height: 300px;
+  background-color: black;
+}
+.containerf{
+ width: 90%;
+}

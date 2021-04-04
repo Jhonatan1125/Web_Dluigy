@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 11, 2020, 12:38:55 AM
+    Author     : Jimbo
+
+*/
+form2{
+  display: flex;
+  flex-flow: column;
+  color:rgba(0,0,0,0.6);
+  background: white;
+  width: 30%;
+  height: 80%;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  box-shadow:rgba(0, 0, 0, 8) 0px 10px 30px;
+  border-radius: 10px;
+  margin-left: 460px;
+  margin-top: 35px;
+}
+input,textarea{
+  border: none;
+  resize: none;
+  outline:none;
+  background:none;
+  padding: 10px 10px;
+  width: 80%;
+  margin: 25px;
+  transition: all 300ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.btn-danger{
+  border: none;
+  outline: none;
+  padding: 15px;
+  width: 250px;
+  color: white;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.7);
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: all 300ms;
+  background: rgba(0,212,255,1)
+  
+}

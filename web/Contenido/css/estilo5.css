@@ -1,0 +1,244 @@
+@import url(https://allfont.es/allfont.css?fonts=playfair-display-black-italic);
+/*Versiones moviles*/
+/*Computador
+@media all and (min-width: 1440px){
+  .navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.5s; margin-top:0;  }
+  .navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+  .navbar .nav-item:hover .dropdown-menu{ transition: .9s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+  .mapa{width: 700px; height: 600px;}
+  .video-fluid{width: 700px; height: auto;}
+}*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+/*
+/////
+/////
+/////
+///// Opciones de menu y sub-menu
+/////
+/////
+/////
+*/
+
+
+/*
+/////
+/////
+/////
+///// Cuerpo del HTML (BODY)
+/////
+/////
+/////
+*/
+
+.C-medidas{
+    height: 100%;
+    min-height: 750px;
+}
+
+ul a{
+  color: white;
+}
+
+ul a:hover{
+  background-color: rgba(0, 0, 0, 0.329);
+  color: white;
+}
+
+.menu-lateral{
+  height: 100%;
+  background-color: rgb(80, 80, 80);
+  border-left: 3px solid red;
+  border-right: 3px solid red;
+}
+
+
+.logo-menu-lateral{
+  padding-top: 20px;
+  background-color: rgb(175, 174, 174);
+  height: 70px;
+  border-bottom: 3px solid red;
+}
+
+.contenido-lateral{
+  margin-top: 30px; 
+  margin-bottom: 30px;
+}
+
+#Contenido-Administrador{
+  background-color: white;
+  height: 100%;
+}
+
+.buscar-form{
+  float: right;
+  color: black;
+}
+
+
+
+#lista-precios{
+  padding: 0px;
+}
+
+#lista-precios a:hover{
+  color: aqua;
+}
+
+/* ESTILO TABLAS */
+a {
+  color: #e33b06;
+}
+
+table {
+  empty-cells: show;
+  margin: auto;
+}
+
+form.jsfcrud_list_form th, td th {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  color: #fff;
+  border: 1px solid #454d55;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 6px;
+  background-color: #343a40;
+  height: 45px;
+}
+
+td {
+  vertical-align: top;
+  padding-bottom: 8px;
+  font-size: small;
+}
+
+form.jsfcrud_list_form td, td td {
+  border: 1px solid #454d55;
+  vertical-align: baseline;
+  padding-bottom: 0px;
+  height: 35px;
+}
+
+tr.jsfcrud_odd_row {
+  background-color: #fefeff;
+  color: black;
+}
+
+
+tr.jsfcrud_even_row {
+  background-color: #dee2e6;
+  color: black;
+}
+
+#busyImage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+
+/*
+/////
+/////
+/////
+///// Pie de pagina (FOOTER)
+/////
+/////
+/////
+*/
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+
+.site-footer hr.small
+{
+  margin:20px 0
+}
+
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+
+.Ico-redessociales{
+  height: 40px;
+  width: 40px;
+}
