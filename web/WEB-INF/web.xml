@@ -41,10 +41,6 @@
         <servlet-class>Controlador.Controlador_Inventario</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Controlador_Producto</servlet-name>
-        <servlet-class>Controlador.Controlador_Producto</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Controlador_Proveedor</servlet-name>
         <servlet-class>Controlador.Controlador_Proveedor</servlet-class>
     </servlet>
@@ -87,10 +83,6 @@
     <servlet-mapping>
         <servlet-name>Controlador_Inventario</servlet-name>
         <url-pattern>/Controlador_Inventario</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Controlador_Producto</servlet-name>
-        <url-pattern>/Controlador_Producto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Controlador_Proveedor</servlet-name>

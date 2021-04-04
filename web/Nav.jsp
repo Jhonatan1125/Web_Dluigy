@@ -2,8 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-toggleable-sm sticky-top">
 
     <a href="index.jsp" style="margin: 0px; padding: 0px;"><img src="Contenido/img/Body/Logo-ico.ico" alt="Logo D'Luigy" width="90px" height="45px"></a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
             aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
     </button>
 
