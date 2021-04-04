@@ -5,7 +5,7 @@
         <div class="col-md-2">
             <div class="row menu-lateral">
                 <div class="col-md-12 col-sm-1 text-center logo-menu-lateral">
-                    <a href="index.jsp" style="margin: 0px; padding: 0px;"><img src="../Contenido/img/Body/Logo-ico.ico" alt="Logo D'Luigy" width="90px" height="45px"></a>
+                    <a href="index.jsp" style="margin: 0px; padding: 0px;"><img src="Contenido/img/Body/Logo-ico.ico" alt="Logo D'Luigy" width="90px" height="45px"></a>
                 </div>
 
                 <div class="col-md-12 col-sm-11 contenido-lateral">
@@ -18,11 +18,11 @@
                             <div id="item-2" class="collapse">
                                 <ul class="nav flex-column ml-3">
                                     <li class="nav-item">
-                                        <a href="#"><i class="fas fa-arrow-circle-right"></i>Productos-(inventario,categoria)</a>
+                                        <a href="Controlador_Producto?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Productos-(inventario,categoria)</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href=""></a>
-                                    <h:link class="nav-link" outcome="/proveedor/List"  ><i class="fas fa-arrow-circle-right"></i>Proveedor</h:link>
+                                        <a  href="Controlador_Proveedor?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Proveedor</a>
+     
                                     </li>
                                 </ul>
                             </div>
@@ -36,10 +36,10 @@
                             <div id="item-3" class="collapse">
                                 <ul class="nav flex-column ml-3">
                                     <li class="nav-item">
-                                    <h:link class="nav-link" ><i class="fas fa-arrow-circle-right"></i>Reporte de ventas</h:link>
+                                        <a href="#" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Reporte de ventas</a>
                                     </li>
                                     <li class="nav-item">
-                                    <h:link class="nav-link" outcome="/recibo/List"  ><i class="fas fa-arrow-circle-right"></i>Informacion de recibos-(producto_recibo)</h:link>
+                                        <a href="Controlador_Recibo?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Informacion de recibos-(producto_recibo)</a>
                                     </li>
                                 </ul>
                             </div>
@@ -53,13 +53,13 @@
                             <div id="item-4" class="collapse">
                                 <ul class="nav flex-column ml-3" style="padding: 0px;">
                                     <li class="nav-item">
-                                    <h:link class="nav-link" outcome="/usuarios/List"  ><i class="fas fa-arrow-circle-right"></i>Registrados-(ROL)</h:link>
+                                        <a href="Controlador_Usuario?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Registrados-(ROL)</a>
                                     </li>
                                     <li class="nav-item">
-                                    <h:link class="nav-link" outcome="/cliente/List"  ><i class="fas fa-arrow-circle-right"></i>Cliente-(Fidelizacion)</h:link>
+                                        <a href="Controlador_Cliente?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Cliente-(Fidelizacion)</a>
                                     </li>
                                     <li class="nav-item">
-                                    <h:link class="nav-link" outcome="/vendedor/List"  ><i class="fas fa-arrow-circle-right"></i>Vendedor</h:link>
+                                        <a href="Controlador_Vendedor?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Vendedor</a>
                                     </li>
                                 </ul>
                             </div>
@@ -73,7 +73,7 @@
                             <div id="item-6" class="collapse">
                                 <ul class="nav flex-column ml-3" style="padding: 0px;">
                                     <li class="nav-item">
-                                        <a href="#">SALIR</a>
+                                        <a href="index.jsp" class="nav-link">SALIR</a>
                                     </li>
                                 </ul>
 
@@ -89,28 +89,5 @@
 
                 <div class="col-md-12" style="border: 2px solid #737373;">
 
-                </div>
-
-
-                <div class="col-md-10 text-center" style="border: 2px solid #737373;">
-
-                    
-
-
-                </div>
-                <div class="col-md-2" style="border: 2px solid #737373;">
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <ui:insert name="lateral1">Pagina Adicional</ui:insert>
-                    <br />
-                    <br />
-                    <ui:insert name="lateral2">Pagina Adicional</ui:insert>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
+               
 <!--FIN DEL CUERPO-->

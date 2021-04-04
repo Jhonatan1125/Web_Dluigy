@@ -8,8 +8,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <jsp:include page="../Head.jsp" />
-        <link href="../Contenido/css/estilo5.css" rel="stylesheet" type="text/css"/>
+        <jsp:include page="Head.jsp" />
+        <link href="Contenido/css/estilo5.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>

@@ -12,11 +12,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <jsp:include page="../../Head.jsp" />
         <title>JSP Page</title>
+        <link href="Contenido/css/estilo5.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
+            <jsp:include page="../../Menu.jsp" />
+            <a href="Controlador_Rol?accion=listar">Rol</a><br>
             <h1>Usuarios</h1>
             <a href="Controlador_Usuario?accion=add">Agregar Nuevo</a><br>
             <table border="1">
@@ -46,25 +49,33 @@
                 %>
                 <tbody>
                     <tr>
-                        <td><%= per.getIDusuario() %></td>
-                        <td><%= per.getIdrol_Fk() %></td>
-                        <td><%= per.getP_Nombre() %></td>
-                        <td><%= per.getS_Nombre() %></td>
-                        <td><%= per.getP_Apellido() %></td>
-                        <td><%= per.getS_Apellido() %></td>
-                        <td><%= per.getTelefono() %></td>
-                        <td><%= per.getFech_Nacimiento() %></td>
-                        <td><%= per.getCorreo() %></td>
-                        <td><%= per.getClave_Cuenta() %></td>
+                        <td><%= per.getIDusuario()%></td>
+                        <td><%= per.getIdrol_Fk()%></td>
+                        <td><%= per.getP_Nombre()%></td>
+                        <td><%= per.getS_Nombre()%></td>
+                        <td><%= per.getP_Apellido()%></td>
+                        <td><%= per.getS_Apellido()%></td>
+                        <td><%= per.getTelefono()%></td>
+                        <td><%= per.getFech_Nacimiento()%></td>
+                        <td><%= per.getCorreo()%></td>
+                        <td><%= per.getClave_Cuenta()%></td>
                         <td>
-                            <a href="Controlador_Usuario?accion=editar&id=<%= per.getIDusuario() %>">Editar</a>
-                            <a href="Controlador_Usuario?accion=eliminar&id=<%= per.getIDusuario() %>">Eliminar</a>
+                            <a href="Controlador_Usuario?accion=editar&id=<%= per.getIDusuario()%>">Editar</a>
+                            <a href="Controlador_Usuario?accion=eliminar&id=<%= per.getIDusuario()%>">Eliminar</a>
                         </td>
                     </tr>
                     <%}%>
                 </tbody>
             </table>
+        </div><!--1 Esto hace parte de Menu.jsp-->
+    </div><!-- Esto hace parte de Menu.jsp-->
+</div><!-- Esto hace parte de Menu.jsp-->
+</div><!-- Esto hace parte de Menu.jsp-->
+</div><!-- Esto hace parte de Menu.jsp-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
-        </div>
-    </body>
+</div>
+</body>
 </html>

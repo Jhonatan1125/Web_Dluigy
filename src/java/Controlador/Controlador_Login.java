@@ -48,11 +48,11 @@ public class Controlador_Login extends HttpServlet {
         switch (iniciarSesion) {
             case "Admin":
                 out.println("alert('¡Bienvenido a Dluigy!\\niniciaste Sesion como "+txtUsuario+"\\nCon el Rol "+iniciarSesion+"')");
-                out.println("location='Vistas/Admin.jsp'");
+                out.println("location='Admin.jsp'");
                 break;
             case "Vendedor":
                 out.println("alert('¡Bienvenido a Dluigy!\\niniciaste Sesion como "+txtUsuario+"\\nCon el Rol "+iniciarSesion+"')");
-                out.println("location='Vistas/Vendedor.jsp'");
+                out.println("location='Vendedor.jsp'");
                 break;
             case "Cliente":
                 out.println("alert('¡Bienvenido a Dluigy!\\niniciaste Sesion como "+txtUsuario+"\\nCon el Rol "+iniciarSesion+"')");
