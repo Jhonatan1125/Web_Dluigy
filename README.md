@@ -3,10 +3,23 @@
 Informacion de login tomada de:
 https://www.youtube.com/watch?v=AqiPJCChXwo
 
-Informacion de CRUD tomada de:
-https://www.youtube.com/watch?v=D3HER9EGQSI
+# Estilos conectados con paginas:
+### 1.Normalize.css
+-  Todas las paginas
+
+### 2.Estilo-Pri.css
+-  Todas Las paginas
+
+### 3.Estilo.css
+-  informacion.jsp
+
+### 4.Estilo5.css
+-  Todas las Vistas
 
 ## PASOS PARA CREAR EL CRUD:
+
+Informacion de CRUD tomada de:
+https://www.youtube.com/watch?v=D3HER9EGQSI
 
 1.Crear la vista de la tabla
 - 
