@@ -36,6 +36,10 @@
         <servlet-name>Controlador_Vendedor</servlet-name>
         <servlet-class>Controlador.Controlador_Vendedor</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controlador_Inventario</servlet-name>
+        <servlet-class>Controlador.Controlador_Inventario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador_Usuario</servlet-name>
         <url-pattern>/Controlador_Usuario</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>Controlador_Vendedor</servlet-name>
         <url-pattern>/Controlador_Vendedor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador_Inventario</servlet-name>
+        <url-pattern>/Controlador_Inventario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
