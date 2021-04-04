@@ -22,10 +22,10 @@
             <div class="col-xs-6 col-md-3">
                 <h6>Sobre Nostros</h6>
                 <ul class="footer-links">
-                    <li><a href="informacion.html#objetivo">Nuestro Objetivo</a></li>
-                    <li><a href="informacion.html#trabajamos">Como Trabajamos</a></li>
-                    <li><a href="informacion.html#contactenos">Contactenos</a></li>
-                    <li><a href="Soporte Tecnico.html">Soporte Tecnico</a></li>
+                    <li><a href="informacion.jsp#objetivo">Nuestro Objetivo</a></li>
+                    <li><a href="informacion.jsp#trabajamos">Como Trabajamos</a></li>
+                    <li><a href="informacion.jsp#contactenos">Contactenos</a></li>
+                    <li><a href="Soporte_Tecnico.jsp">Soporte Tecnico</a></li>
                 </ul>
             </div>
         </div>
