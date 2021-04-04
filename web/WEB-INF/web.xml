@@ -32,6 +32,10 @@
         <servlet-name>Controlador_Recibo</servlet-name>
         <servlet-class>Controlador.Controlador_Recibo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controlador_Vendedor</servlet-name>
+        <servlet-class>Controlador.Controlador_Vendedor</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador_Usuario</servlet-name>
         <url-pattern>/Controlador_Usuario</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>Controlador_Recibo</servlet-name>
         <url-pattern>/Controlador_Recibo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador_Vendedor</servlet-name>
+        <url-pattern>/Controlador_Vendedor</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
