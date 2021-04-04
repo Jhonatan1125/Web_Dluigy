@@ -18,6 +18,7 @@
             <a href="Controlador_Vendedor?accion=listar">Listar Vendedor</a><br><br>
             <a href="Controlador_Inventario?accion=listar">Listar Inventario</a><br><br>
             <a href="Controlador_Proveedor?accion=listar">Listar Proveedor</a><br><br>
+            <a href="Controlador_Producto?accion=listar">Listar Producto</a><br><br>
         </div>
         <jsp:include page="Footer.jsp" /><!--ya incluye en boostrap dentro-->
     </body>
