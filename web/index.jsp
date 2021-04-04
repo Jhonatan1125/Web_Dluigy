@@ -20,6 +20,7 @@
             <a href="Controlador_Recibo?accion=listar">Listar Recibo</a><br><br>
             <a href="Controlador_Vendedor?accion=listar">Listar Vendedor</a><br><br>
             <a href="Controlador_Inventario?accion=listar">Listar Inventario</a><br><br>
+            <a href="Controlador_Proveedor?accion=listar">Listar Proveedor</a><br><br>
         </div>
         <jsp:include page="Footer.jsp" />
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
