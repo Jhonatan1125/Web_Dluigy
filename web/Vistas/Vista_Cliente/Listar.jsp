@@ -26,9 +26,9 @@
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Id Cliente</th>
-                        <th>Id Usuario</th>
-                        <th>Id Fidelizacion</th>
+                        <th class="min">IDe</th>
+                        <th class="min">Id Usuario</th>
+                        <th class="min">Id Fidelizacion</th>
                         <th>Valor Total Compras</th>
                         <th>Numero de compras</th>
                         <th>OPCIONES</th>

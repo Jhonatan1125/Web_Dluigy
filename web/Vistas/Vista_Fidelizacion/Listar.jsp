@@ -19,7 +19,7 @@
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
                     <tr>
-                        <th>IdFidelizacion</th>
+                        <th class="min">ID</th>
                         <th>Puntaje Total</th>
                         <th>Fecha de Caducidad</th>
                         <th>OPCIONES</th>

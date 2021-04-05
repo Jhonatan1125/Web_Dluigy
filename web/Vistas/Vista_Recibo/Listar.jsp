@@ -25,9 +25,9 @@
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Id Recibo</th>
-                        <th>Id Vendedor</th>
-                        <th>Id Cliente</th>
+                        <th class="min">ID</th>
+                        <th class="min">Id Vendedor</th>
+                        <th class="min">Id Cliente</th>
                         <th>Fecha Recibo</th>
                         <th>Total</th>
                         <th>OPCIONES</th>

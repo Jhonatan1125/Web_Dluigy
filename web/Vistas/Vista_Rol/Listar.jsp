@@ -25,7 +25,7 @@
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
                     <tr>
-                        <th>IdRol</th>
+                        <th class="min">ID</th>
                         <th>Nom_Rol</th>
                         <th>Descripcion</th>
                         <th>OPCIONES</th>

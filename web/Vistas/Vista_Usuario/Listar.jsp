@@ -27,8 +27,8 @@
                 <table class="table table-bordered" border="1">
                     <thead class="thead-dark">
                         <tr>
-                            <th>IDUsuarios</th>
-                            <th>IdRol_Fk</th>
+                            <th class="min">ID</th>
+                            <th class="min">IdRol_Fk</th>
                             <th>P_Nombre</th>
                             <th>S_Nombre</th>
                             <th>P_Apellido</th>
@@ -36,7 +36,7 @@
                             <th>Telefono</th>
                             <th>Fech_Nacimiento</th>
                             <th>Correo</th>
-                            <th>Clave_Cuenta</th>
+                            <th>Clave</th>
                             <th>OPCIONES</th>
                         </tr>
                     </thead>

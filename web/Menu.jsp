@@ -22,7 +22,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a href="Controlador_Proveedor?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Proveedor</a>
-     
+
                                     </li>
                                 </ul>
                             </div>
@@ -66,6 +66,21 @@
                         </li>
                     </ul>
 
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item text-center">
+                            <a class="nav-link" data-toggle="collapse" href="#item-5">CORREO <i class="fas fa-envelope-open-text"></i>
+
+</a>
+                            <div id="item-5" class="collapse">
+                                <ul class="nav flex-column ml-3" style="padding: 0px;">
+                                    <li class="nav-item">
+                                        <a href="FormEmail.jsp" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Enviar Correo</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
 
                     <ul class="nav nav-pills flex-column">
                         <li class="nav-item text-center">
@@ -89,5 +104,5 @@
 
                 <div class="col-md-12" style="border: 2px solid #737373;">
 
-               
-<!--FIN DEL CUERPO-->
+
+                    <!--FIN DEL CUERPO-->

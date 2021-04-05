@@ -28,13 +28,13 @@
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Id producto</th>
-                        <th>Id inventaro</th>
-                        <th>id categoria</th>
-                        <th>Nombre Producto</th>
-                        <th>Color Producto</th>
-                        <th>Talla Producto</th>
-                        <th>Material Producto</th>
+                        <th class="min">ID</th>
+                        <th class="min">Id inventaro</th>
+                        <th class="min">id categoria</th>
+                        <th>Nombre</th>
+                        <th>Color</th>
+                        <th>Talla</th>
+                        <th>Material</th>
                         <th>Precio Venta</th>
                         <th>Precio Compra</th>
                         <th>OPCIONES</th>

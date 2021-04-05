@@ -20,7 +20,7 @@
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Idcategoria</th>
+                        <th class="min">ID</th>
                         <th>Nombre de Categoria</th>
                         <th>Descripcion</th>
                         <th>OPCIONES</th>

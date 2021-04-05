@@ -20,10 +20,10 @@
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.5s; margin-top:0;  }
-.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
-.navbar .nav-item:hover .dropdown-menu{ transition: .9s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
-.mapa{width: 700px; height: 600px;}
-.video-fluid{width: 700px; height: auto;}
+                            .navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+                            .navbar .nav-item:hover .dropdown-menu{ transition: .9s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+                            .mapa{width: 700px; height: 600px;}
+                            .video-fluid{width: 700px; height: auto;}
 }
 /*
 /////
@@ -36,38 +36,38 @@
 */
 
 .navbar{
-  font-weight: bold;
-  /*Color de el menu*/
-  background-color: #D1D1D1;
-  /*Color del borde superior e inferior del menu*/
-  border-top: 2px solid red;
-  border-bottom: 2px solid red;
-  /*top - right -bottom -left*/
-  padding: 4px 5px 4px 10px;
+    font-weight: bold;
+    /*Color de el menu*/
+    background-color: #D1D1D1;
+    /*Color del borde superior e inferior del menu*/
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    /*top - right -bottom -left*/
+    padding: 4px 5px 4px 10px;
 }
 
 .navbar .navbar-nav .dropdown-menu{
-  /*Pequeño espacio entre el cuadro de menu y el submenu para que no choque con el borde el menu*/
-  margin-top: 10px;
-  /*Color de los sub-menu*/
-  background-color:  #D7D7D7;
+    /*Pequeño espacio entre el cuadro de menu y el submenu para que no choque con el borde el menu*/
+    margin-top: 10px;
+    /*Color de los sub-menu*/
+    background-color:  #D7D7D7;
 }
 
 .navbar .navbar-nav .dropdown-menu a{
-  /*Color de las letra de los sub menu*/
-  color: black;
-  /*Espacio superior e inferior entre los textos del submenu*/
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  transition: 0.5s;
+    /*Color de las letra de los sub menu*/
+    color: black;
+    /*Espacio superior e inferior entre los textos del submenu*/
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    transition: 0.5s;
 }
 
 .navbar .navbar-nav .dropdown-menu a:hover{
-  /*Color del las letras de los sub-menu al pasar el clic*/
-  color: black;
-  /*Color del borde izquierdo de los sub-menu al pasar el clic*/
-  border-left: 3px solid red;
+    /*Color del las letras de los sub-menu al pasar el clic*/
+    color: black;
+    /*Color del borde izquierdo de los sub-menu al pasar el clic*/
+    border-left: 3px solid red;
 }
 /*
 /////
@@ -78,7 +78,9 @@
 /////
 /////
 */
-
+thead .min{
+    width: 5%;
+}
 
 
 
@@ -109,85 +111,85 @@
 
 .site-footer
 {
-  background-color:#26272b;
-  padding:45px 0 20px;
-  font-size:15px;
-  line-height:24px;
-  color:#737373;
+    background-color:#26272b;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
 }
 .site-footer hr
 {
-  border-top-color:#bbb;
-  opacity:0.5
+    border-top-color:#bbb;
+    opacity:0.5
 }
 
 .site-footer hr.small
 {
-  margin:20px 0
+    margin:20px 0
 }
 
 .site-footer h6
 {
-  color:#fff;
-  font-size:16px;
-  text-transform:uppercase;
-  margin-top:5px;
-  letter-spacing:2px
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
 }
 .site-footer a
 {
-  color:#737373;
+    color:#737373;
 }
 .footer-links
 {
-  padding-left:0;
-  list-style:none
+    padding-left:0;
+    list-style:none
 }
 .footer-links li
 {
-  display:block
+    display:block
 }
 .footer-links a
 {
-  color:#737373
+    color:#737373
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#3366cc;
-  text-decoration:none;
+    color:#3366cc;
+    text-decoration:none;
 }
 .footer-links.inline li
 {
-  display:inline-block
+    display:inline-block
 }
 .site-footer .social-icons
 {
-  text-align:right
+    text-align:right
 }
 .site-footer .social-icons a
 {
-  width:40px;
-  height:40px;
-  line-height:40px;
-  margin-left:6px;
-  margin-right:0;
-  border-radius:100%;
-  background-color:#33353d
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
 }
 
 .social-icons
 {
-  padding-left:0;
-  margin-bottom:0;
-  list-style:none
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none
 }
 .social-icons li
 {
-  display:inline-block;
-  margin-bottom:4px
+    display:inline-block;
+    margin-bottom:4px
 }
 
 .Ico-redessociales{
-  height: 40px;
-  width: 40px;
+    height: 40px;
+    width: 40px;
 }

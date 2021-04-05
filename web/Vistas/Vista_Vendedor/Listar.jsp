@@ -25,8 +25,8 @@
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Id vendedor</th>
-                        <th>Id usuarios</th>
+                        <th class="min">ID</th>
+                        <th class="min">Id usuarios</th>
                         <th>Numero de ventas</th>
                         <th>Comision</th>
                         <th>OPCIONES</th>

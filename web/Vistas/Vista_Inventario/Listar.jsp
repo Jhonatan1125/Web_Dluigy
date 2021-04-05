@@ -20,7 +20,7 @@
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Id Inventario</th>
+                        <th class="min">ID</th>
                         <th>Cantidad</th>
                         <th>Fecha de entrada</th>
                         <th>Cantidad de entrada</th>

@@ -25,7 +25,7 @@
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Id del proveedor</th>
+                        <th class="min">ID</th>
                         <th>Nombre del proveedor</th>
                         <th>Correo del proveedor</th>
                         <th>Telefono del proveedor</th>
