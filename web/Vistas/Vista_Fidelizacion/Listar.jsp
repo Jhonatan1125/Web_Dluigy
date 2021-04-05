@@ -12,7 +12,7 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <div class="container">
+        <div class="container-fluid">
             <h1>Listado de Fidelizacion</h1>
             <a class="btn btn-success btn-sm" href="Controlador_Fidelizacion?accion=add">Agregar Nuevo</a><br>
             <br>

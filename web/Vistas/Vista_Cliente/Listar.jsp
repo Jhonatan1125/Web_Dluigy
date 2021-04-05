@@ -18,7 +18,7 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <div class="container">
+        <div class="container-fluid">
             <a href="Controlador_Fidelizacion?accion=listar">Fidelizacion</a><br>
             <h1>Listado de Cliente</h1>
             <a class="btn btn-success btn-sm" href="Controlador_Cliente?accion=add">Agregar Nuevo</a><br>

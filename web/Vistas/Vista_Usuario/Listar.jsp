@@ -19,7 +19,7 @@
     <body>
         <div>
             <jsp:include page="../../Menu.jsp" />
-            <div class="container">
+            <div class="container-fluid">
                 <a href="Controlador_Rol?accion=listar">Rol</a><br>
                 <h1>Usuarios</h1>
                 <a class="btn btn-success btn-sm" href="Controlador_Usuario?accion=add">Agregar Nuevo</a><br>

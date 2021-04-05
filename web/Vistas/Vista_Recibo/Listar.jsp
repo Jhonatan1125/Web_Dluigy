@@ -18,7 +18,7 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <div class="container">
+        <div class="container-fluid">
             <h1>Listado de Recibo</h1>
             <a class="btn btn-success btn-sm" href="Controlador_Recibo?accion=add">Agregar Nuevo</a><br>
             <br>

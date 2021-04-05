@@ -19,7 +19,7 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <div class="container">
+        <div class="container-fluid">
             <a href="Controlador_Inventario?accion=listar">Inventario</a>
             <a href="Controlador_Categoria?accion=listar">Categoria</a>
             <h1>Listado de Producto</h1>
