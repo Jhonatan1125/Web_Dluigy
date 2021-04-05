@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Usuarios" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9f2a9a3d-7248-45aa-82eb-477bdf0ca25c">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="57"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<queryString>
 		<![CDATA[SELECT
@@ -59,10 +59,6 @@ ORDER BY
 				</textElement>
 				<text><![CDATA[REPORTE DE USUARIOS D'LUIGY]]></text>
 			</staticText>
-			<image>
-				<reportElement x="0" y="0" width="64" height="79" uuid="31b80964-51b5-4388-9fbf-e80fda072f0f"/>
-				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\ADSI\\FASE IV B\\JAVA\\reportes\\Usuario.png"]]></imageExpression>
-			</image>
 			<textField>
 				<reportElement x="682" y="0" width="80" height="20" uuid="d569906d-e605-41a2-a21c-d8d258aa980d"/>
 				<textElement textAlignment="Right"/>
@@ -77,6 +73,10 @@ ORDER BY
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="-1" y="0" width="64" height="79" uuid="c813336e-238f-4a87-b4a6-70e43728b39e"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\ADSI\\FASE IV B\\JAVA\\Web_Dluigy\\web\\Contenido\\img\\Body\\Usuario.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

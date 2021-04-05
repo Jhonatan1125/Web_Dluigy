@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1c449113-6333-4ed7-b791-7ddcc72bf2bc">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="45"/>
+	<property name="ireport.y" value="0"/>
 	<queryString>
 		<![CDATA[SELECT
      recibo.`IdRecibo` AS recibo_IdRecibo,
@@ -41,10 +41,6 @@ ORDER BY
 	</background>
 	<title>
 		<band height="79" splitType="Stretch">
-			<image>
-				<reportElement x="0" y="0" width="74" height="79" uuid="c13a41e2-b2e0-49af-b46d-6a4baaf03c5f"/>
-				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\ADSI\\FASE IV B\\JAVA\\reportes\\recibo.png"]]></imageExpression>
-			</image>
 			<textField>
 				<reportElement x="435" y="0" width="80" height="20" uuid="690dd57b-d11f-4317-af1d-101a9659e9ae"/>
 				<textElement textAlignment="Right"/>
@@ -66,6 +62,10 @@ ORDER BY
 				</textElement>
 				<text><![CDATA[REPORTE DE RECIBO D'LUIGY]]></text>
 			</staticText>
+			<image>
+				<reportElement x="0" y="1" width="64" height="78" uuid="7a27e184-059b-4586-940f-41d85cb40d7a"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\ADSI\\FASE IV B\\JAVA\\Web_Dluigy\\web\\Contenido\\img\\Body\\recibo.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

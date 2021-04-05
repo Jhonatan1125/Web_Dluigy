@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Producto" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0596ddf1-6da3-40e8-9761-8ff6aeea676f">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="170"/>
 	<property name="ireport.y" value="0"/>
 	<queryString>
 		<![CDATA[SELECT
@@ -15,8 +15,7 @@
      producto.`Precio_Unitario_Venta` AS producto_Precio_Unitario_Venta,
      producto.`Precio_Unitario_Compra` AS producto_Precio_Unitario_Compra
 FROM
-     `producto` producto
-]]>
+     `producto` producto]]>
 	</queryString>
 	<field name="producto_IdProducto" class="java.lang.Integer"/>
 	<field name="producto_IdInventario_Fk" class="java.lang.Integer"/>
@@ -41,10 +40,6 @@ FROM
 	</background>
 	<title>
 		<band height="79" splitType="Stretch">
-			<image>
-				<reportElement x="721" y="0" width="81" height="79" uuid="eca057a2-5e51-4df1-bfe0-ae2aff770adf"/>
-				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\ADSI\\FASE IV B\\JAVA\\reportes\\Producto.png"]]></imageExpression>
-			</image>
 			<staticText>
 				<reportElement x="124" y="-1" width="571" height="60" uuid="c3f2f2ae-af71-4f6c-b776-d0b585c04c78"/>
 				<textElement textAlignment="Center">
@@ -66,6 +61,10 @@ FROM
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="738" y="0" width="64" height="79" uuid="524a6fc2-8214-44ad-bc4f-1fd5cd277952"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\ADSI\\FASE IV B\\JAVA\\Web_Dluigy\\web\\Contenido\\img\\Body\\Producto.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
