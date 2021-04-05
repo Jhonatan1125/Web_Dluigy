@@ -16,6 +16,7 @@ public class Controlador_Usuario extends HttpServlet {
     String listar = "Vistas/Vista_Usuario/Listar.jsp";
     String add = "Vistas/Vista_Usuario/add.jsp";
     String edit = "Vistas/Vista_Usuario/edit.jsp";
+    String reporte = "Vistas/Vista_Usuario/Reporte_Usuarios.jsp";
     Usuario u = new Usuario();
     UsuarioDAO dao = new UsuarioDAO();
     int id;
@@ -107,6 +108,8 @@ public class Controlador_Usuario extends HttpServlet {
             u.setIDusuario(id);
             dao.eliminar(id);
             acceso = listar;
+        }else if (action.equalsIgnoreCase("reporte")) {
+            request.getRequestDispatcher("Vistas/Vista_Usuario/Reporte_Usuarios.jsp").forward(request,response);
         }
         RequestDispatcher vista = request.getRequestDispatcher(acceso);
         vista.forward(request, response);

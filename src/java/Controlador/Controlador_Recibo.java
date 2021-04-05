@@ -21,6 +21,7 @@ public class Controlador_Recibo extends HttpServlet {
     String listar = "Vistas/Vista_Recibo/Listar.jsp";
     String add = "Vistas/Vista_Recibo/add.jsp";
     String edit = "Vistas/Vista_Recibo/edit.jsp";
+        String reporte = "Vistas/Vista_Recibo/Reporte_Recibo.jsp";
     Recibo u = new Recibo();
     ReciboDAO dao = new ReciboDAO();
 
@@ -90,6 +91,8 @@ public class Controlador_Recibo extends HttpServlet {
             u.setIdRecibo(idCap);
             dao.eliminar(idCap);
             acceso = listar;
+        }else if (action.equalsIgnoreCase("reporte")) {
+            request.getRequestDispatcher("Vistas/Vista_Recibo/Reporte_Recibo.jsp").forward(request,response);
         }
 
         RequestDispatcher vista = request.getRequestDispatcher(acceso);

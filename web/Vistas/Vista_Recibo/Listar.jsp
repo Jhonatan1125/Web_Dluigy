@@ -21,6 +21,7 @@
         <div class="container-fluid">
             <h1>Listado de Recibo</h1>
             <a class="btn btn-success btn-sm" href="Controlador_Recibo?accion=add">Agregar Nuevo</a><br>
+              <a class="btn btn-info btn-sm" href="Controlador_Recibo?accion=reporte">Reporte Recibo</a><br>
             <br>
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">

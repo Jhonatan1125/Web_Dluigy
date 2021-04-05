@@ -20,6 +20,7 @@ public class Controlador_Producto extends HttpServlet {
     String listar = "Vistas/Vista_Producto/Listar.jsp";
     String add = "Vistas/Vista_Producto/add.jsp";
     String edit = "Vistas/Vista_Producto/edit.jsp";
+     String reporte = "Vistas/Vista_Producto/Reporte_Producto.jsp";
     Producto u = new Producto();
     ProductoDAO dao = new ProductoDAO();
 
@@ -109,6 +110,8 @@ public class Controlador_Producto extends HttpServlet {
             u.setIdProducto(idCap);
             dao.eliminar(idCap);
             acceso = listar;
+        }else if (action.equalsIgnoreCase("reporte")) {
+            request.getRequestDispatcher("Vistas/Vista_Producto/Reporte_Producto.jsp").forward(request,response);
         }
 
         RequestDispatcher vista = request.getRequestDispatcher(acceso);

@@ -23,6 +23,7 @@
                 <a href="Controlador_Rol?accion=listar">Rol</a><br>
                 <h1>Usuarios</h1>
                 <a class="btn btn-success btn-sm" href="Controlador_Usuario?accion=add">Agregar Nuevo</a><br>
+                <a class="btn btn-success btn-sm" href="Controlador_Usuario?accion=reporte">Reporte Usuarios</a><br>
                 <br>
                 <table class="table table-bordered" border="1">
                     <thead class="thead-dark">

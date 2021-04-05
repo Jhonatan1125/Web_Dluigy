@@ -24,6 +24,7 @@
             <a href="Controlador_Categoria?accion=listar">Categoria</a>
             <h1>Listado de Producto</h1>
             <a class="btn btn-success btn-sm" href="Controlador_Producto?accion=add">Agregar Nuevo</a><br>
+            <a class="btn btn-info btn-sm" href="Controlador_Producto?accion=reporte">Reporte Producto</a><br>
             <br>
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
