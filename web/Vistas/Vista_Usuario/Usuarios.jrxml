@@ -73,10 +73,6 @@ ORDER BY
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
-			<image>
-				<reportElement x="-1" y="0" width="64" height="79" uuid="c813336e-238f-4a87-b4a6-70e43728b39e"/>
-				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\ADSI\\FASE IV B\\JAVA\\Web_Dluigy\\web\\Contenido\\img\\Body\\Usuario.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>

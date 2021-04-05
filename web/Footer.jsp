@@ -1,5 +1,5 @@
 <!--INICIO DEL FOOTER-->
-<footer class="site-footer">
+<footer class="site-footer" style="margin-top: 100px;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 col-md-6">

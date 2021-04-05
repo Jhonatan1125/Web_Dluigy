@@ -62,10 +62,6 @@ ORDER BY
 				</textElement>
 				<text><![CDATA[REPORTE DE RECIBO D'LUIGY]]></text>
 			</staticText>
-			<image>
-				<reportElement x="0" y="1" width="64" height="78" uuid="7a27e184-059b-4586-940f-41d85cb40d7a"/>
-				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\ADSI\\FASE IV B\\JAVA\\Web_Dluigy\\web\\Contenido\\img\\Body\\recibo.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>
