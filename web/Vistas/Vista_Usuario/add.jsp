@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="col-lg-8">
+            <div class="col-lg-8"> 
                 <h1>Añadir Usuario</h1>
                 <form action="Controlador_Usuario">
                     <label for="Rol">Rol del Usuario</label>

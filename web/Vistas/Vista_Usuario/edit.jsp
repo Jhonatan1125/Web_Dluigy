@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="col-lg-6">
+            <div class="col-lg-6"> 
                  <%
                     UsuarioDAO dao = new UsuarioDAO();
                     int id = Integer.parseInt((String) request.getAttribute("idper"));

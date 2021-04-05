@@ -8,7 +8,7 @@
     <body>
        
         <div class="container">  
-            <div class="col-lg-8">
+            <div class="col-lg-8"> 
                 <h1>Añadir Nombretabla</h1>
             <form action="Controlador_Proveedor">
 

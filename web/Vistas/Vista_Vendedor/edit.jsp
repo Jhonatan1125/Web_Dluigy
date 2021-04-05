@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="col-lg-6">
+            <div class="col-lg-6"> 
                 <%
                 VendedorDAO dao = new VendedorDAO();
                 int id = Integer.parseInt((String) request.getAttribute("IDFun"));

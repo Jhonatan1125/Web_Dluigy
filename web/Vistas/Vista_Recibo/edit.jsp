@@ -10,7 +10,7 @@
         <title>Editar Recibo</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container"> 
             <div class="col-lg-6">
                 <%
                 ReciboDAO dao = new ReciboDAO();

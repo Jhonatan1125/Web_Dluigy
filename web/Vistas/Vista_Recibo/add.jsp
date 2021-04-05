@@ -7,7 +7,7 @@
         <title>Añadir Recibo</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container"> 
             <div class="col-lg-8">
                  <h1>Añadir Recibo</h1>
             <form action="Controlador_Recibo">

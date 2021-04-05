@@ -9,7 +9,7 @@
         
         <title>Editar Rol</title>
     </head>
-    <body>
+    <body> 
         <div class="container">
             <div class="col-lg-6">
                 <%
