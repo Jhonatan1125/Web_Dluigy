@@ -19,52 +19,55 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <a href="Controlador_Inventario?accion=listar">Inventario</a>
-        <a href="Controlador_Categoria?accion=listar">Categoria</a>
-        <h1>Listado de Producto</h1>
-        <a href="Controlador_Producto?accion=add">Agregar Nuevo</a><br>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Id producto</th>
-                    <th>Id inventaro</th>
-                    <th>id categoria</th>
-                    <th>Nombre Producto</th>
-                    <th>Color Producto</th>
-                    <th>Talla Producto</th>
-                    <th>Material Producto</th>
-                    <th>Precio Venta</th>
-                    <th>Precio Compra</th>
-                    <th>OPCIONES</th>
-                </tr>
-            </thead>
-            <%
-                ProductoDAO dao = new ProductoDAO();
-                List<Producto> list = dao.listar();
-                Iterator<Producto> iter = list.iterator();
-                Producto tab = null;
-                while (iter.hasNext()) {//No cerrar este corchete
-                    tab = iter.next();
-            %>
-            <tbody>
-                <tr>
-                    <td><%= tab.getIdProducto()%></td>
-                    <td><%= tab.getIdInventario_Fk()%></td>
-                    <td><%= tab.getIdCategoria_Fk()%></td>
-                    <td><%= tab.getNom_Prod()%></td>
-                    <td><%= tab.getColor_Prod()%></td>
-                    <td><%= tab.getTalla_Prod()%></td>
-                    <td><%= tab.getMaterial_Prod()%></td>
-                    <td><%= tab.getPrecio_Unitario_Venta()%></td>
-                    <td><%= tab.getPrecio_Unitario_Compra()%></td>
-                    <td>
-                        <a href="Controlador_Producto?accion=editar&id=<%= tab.getIdProducto()%>">Editar</a>
-                        <a href="Controlador_Producto?accion=eliminar&id=<%= tab.getIdProducto()%>">Eliminar</a>
-                    </td>
-                </tr>
-                <%}%>
-            </tbody>
-        </table>
+        <div class="container">
+            <a href="Controlador_Inventario?accion=listar">Inventario</a>
+            <a href="Controlador_Categoria?accion=listar">Categoria</a>
+            <h1>Listado de Producto</h1>
+            <a class="btn btn-success btn-sm" href="Controlador_Producto?accion=add">Agregar Nuevo</a><br>
+            <br>
+            <table class="table table-bordered" border="1">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id producto</th>
+                        <th>Id inventaro</th>
+                        <th>id categoria</th>
+                        <th>Nombre Producto</th>
+                        <th>Color Producto</th>
+                        <th>Talla Producto</th>
+                        <th>Material Producto</th>
+                        <th>Precio Venta</th>
+                        <th>Precio Compra</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <%
+                    ProductoDAO dao = new ProductoDAO();
+                    List<Producto> list = dao.listar();
+                    Iterator<Producto> iter = list.iterator();
+                    Producto tab = null;
+                    while (iter.hasNext()) {//No cerrar este corchete
+                        tab = iter.next();
+                %>
+                <tbody>
+                    <tr>
+                        <td><%= tab.getIdProducto()%></td>
+                        <td><%= tab.getIdInventario_Fk()%></td>
+                        <td><%= tab.getIdCategoria_Fk()%></td>
+                        <td><%= tab.getNom_Prod()%></td>
+                        <td><%= tab.getColor_Prod()%></td>
+                        <td><%= tab.getTalla_Prod()%></td>
+                        <td><%= tab.getMaterial_Prod()%></td>
+                        <td><%= tab.getPrecio_Unitario_Venta()%></td>
+                        <td><%= tab.getPrecio_Unitario_Compra()%></td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="Controlador_Producto?accion=editar&id=<%= tab.getIdProducto()%>">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="Controlador_Producto?accion=eliminar&id=<%= tab.getIdProducto()%>">Eliminar</a>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
     </div><!--1 Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->

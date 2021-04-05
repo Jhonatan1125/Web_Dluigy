@@ -18,10 +18,10 @@
                             <div id="item-2" class="collapse">
                                 <ul class="nav flex-column ml-3">
                                     <li class="nav-item">
-                                        <a href="Controlador_Producto?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Productos-(inventario,categoria)</a>
+                                        <a  href="Controlador_Producto?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Productos-(inventario,categoria)</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a  href="Controlador_Proveedor?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Proveedor</a>
+                                        <a href="Controlador_Proveedor?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Proveedor</a>
      
                                     </li>
                                 </ul>

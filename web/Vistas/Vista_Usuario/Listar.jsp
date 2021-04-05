@@ -19,54 +19,57 @@
     <body>
         <div>
             <jsp:include page="../../Menu.jsp" />
-            <a href="Controlador_Rol?accion=listar">Rol</a><br>
-            <h1>Usuarios</h1>
-            <a href="Controlador_Usuario?accion=add">Agregar Nuevo</a><br>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>IDUsuarios</th>
-                        <th>IdRol_Fk</th>
-                        <th>P_Nombre</th>
-                        <th>S_Nombre</th>
-                        <th>P_Apellido</th>
-                        <th>S_Apellido</th>
-                        <th>Telefono</th>
-                        <th>Fech_Nacimiento</th>
-                        <th>Correo</th>
-                        <th>Clave_Cuenta</th>
-                        <th>OPCIONES</th>
-                    </tr>
-                </thead>
-                <%
-                    UsuarioDAO dao = new UsuarioDAO();
-                    List<Usuario> list = dao.listar();
-                    Iterator<Usuario> iter = list.iterator();
-                    Usuario per = null;
-                    while (iter.hasNext()) {
-                        per = iter.next();
+            <div class="container">
+                <a href="Controlador_Rol?accion=listar">Rol</a><br>
+                <h1>Usuarios</h1>
+                <a class="btn btn-success btn-sm" href="Controlador_Usuario?accion=add">Agregar Nuevo</a><br>
+                <br>
+                <table class="table table-bordered" border="1">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>IDUsuarios</th>
+                            <th>IdRol_Fk</th>
+                            <th>P_Nombre</th>
+                            <th>S_Nombre</th>
+                            <th>P_Apellido</th>
+                            <th>S_Apellido</th>
+                            <th>Telefono</th>
+                            <th>Fech_Nacimiento</th>
+                            <th>Correo</th>
+                            <th>Clave_Cuenta</th>
+                            <th>OPCIONES</th>
+                        </tr>
+                    </thead>
+                    <%
+                        UsuarioDAO dao = new UsuarioDAO();
+                        List<Usuario> list = dao.listar();
+                        Iterator<Usuario> iter = list.iterator();
+                        Usuario per = null;
+                        while (iter.hasNext()) {
+                            per = iter.next();
 
-                %>
-                <tbody>
-                    <tr>
-                        <td><%= per.getIDusuario()%></td>
-                        <td><%= per.getIdrol_Fk()%></td>
-                        <td><%= per.getP_Nombre()%></td>
-                        <td><%= per.getS_Nombre()%></td>
-                        <td><%= per.getP_Apellido()%></td>
-                        <td><%= per.getS_Apellido()%></td>
-                        <td><%= per.getTelefono()%></td>
-                        <td><%= per.getFech_Nacimiento()%></td>
-                        <td><%= per.getCorreo()%></td>
-                        <td><%= per.getClave_Cuenta()%></td>
-                        <td>
-                            <a href="Controlador_Usuario?accion=editar&id=<%= per.getIDusuario()%>">Editar</a>
-                            <a href="Controlador_Usuario?accion=eliminar&id=<%= per.getIDusuario()%>">Eliminar</a>
-                        </td>
-                    </tr>
-                    <%}%>
-                </tbody>
-            </table>
+                    %>
+                    <tbody>
+                        <tr>
+                            <td><%= per.getIDusuario()%></td>
+                            <td><%= per.getIdrol_Fk()%></td>
+                            <td><%= per.getP_Nombre()%></td>
+                            <td><%= per.getS_Nombre()%></td>
+                            <td><%= per.getP_Apellido()%></td>
+                            <td><%= per.getS_Apellido()%></td>
+                            <td><%= per.getTelefono()%></td>
+                            <td><%= per.getFech_Nacimiento()%></td>
+                            <td><%= per.getCorreo()%></td>
+                            <td><%= per.getClave_Cuenta()%></td>
+                            <td>
+                                <a class="btn btn-success btn-sm" href="Controlador_Usuario?accion=editar&id=<%= per.getIDusuario()%>">Editar</a>
+                                <a class="btn btn-danger btn-sm" href="Controlador_Usuario?accion=eliminar&id=<%= per.getIDusuario()%>">Eliminar</a>
+                            </td>
+                        </tr>
+                        <%}%>
+                    </tbody>
+                </table>
+            </div>
         </div><!--1 Esto hace parte de Menu.jsp-->
     </div><!-- Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->

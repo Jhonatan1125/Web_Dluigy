@@ -12,38 +12,41 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <h1>Listado de Fidelizacion</h1>
-        <a href="Controlador_Fidelizacion?accion=add">Agregar Nuevo</a><br>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>IdFidelizacion</th>
-                    <th>Puntaje Total</th>
-                    <th>Fecha de Caducidad</th>
-                    <th>OPCIONES</th>
-                </tr>
-            </thead>
-            <%
-                FidelizacionDAO dao = new FidelizacionDAO();
-                List<Fidelizacion> list = dao.listar();
-                Iterator<Fidelizacion> iter = list.iterator();
-                Fidelizacion tab = null;
-                while (iter.hasNext()) {//No cerrar este corchete
-                    tab = iter.next();
-            %>
-            <tbody>
-                <tr>
-                    <td><%= tab.getIdFidelizacion()%></td>
-                    <td><%= tab.getPunt_Total()%></td>
-                    <td><%= tab.getFech_Caducidad()%></td>
-                    <td>
-                        <a href="Controlador_Fidelizacion?accion=editar&id=<%= tab.getIdFidelizacion()%>">Editar</a>
-                        <a href="Controlador_Fidelizacion?accion=eliminar&id=<%= tab.getIdFidelizacion()%>">Eliminar</a>
-                    </td>
-                </tr>
-                <%}%>
-            </tbody>
-        </table>
+        <div class="container">
+            <h1>Listado de Fidelizacion</h1>
+            <a class="btn btn-success btn-sm" href="Controlador_Fidelizacion?accion=add">Agregar Nuevo</a><br>
+            <br>
+            <table class="table table-bordered" border="1">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>IdFidelizacion</th>
+                        <th>Puntaje Total</th>
+                        <th>Fecha de Caducidad</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <%
+                    FidelizacionDAO dao = new FidelizacionDAO();
+                    List<Fidelizacion> list = dao.listar();
+                    Iterator<Fidelizacion> iter = list.iterator();
+                    Fidelizacion tab = null;
+                    while (iter.hasNext()) {//No cerrar este corchete
+                        tab = iter.next();
+                %>
+                <tbody>
+                    <tr>
+                        <td><%= tab.getIdFidelizacion()%></td>
+                        <td><%= tab.getPunt_Total()%></td>
+                        <td><%= tab.getFech_Caducidad()%></td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="Controlador_Fidelizacion?accion=editar&id=<%= tab.getIdFidelizacion()%>">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="Controlador_Fidelizacion?accion=eliminar&id=<%= tab.getIdFidelizacion()%>">Eliminar</a>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
     </div><!--1 Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->

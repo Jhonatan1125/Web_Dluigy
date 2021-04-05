@@ -18,40 +18,43 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <h1>Listado de Vendedor</h1>
-        <a href="Controlador_Vendedor?accion=add">Agregar Nuevo</a><br>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Id vendedor</th>
-                    <th>Id usuarios</th>
-                    <th>Numero de ventas</th>
-                    <th>Comision</th>
-                    <th>OPCIONES</th>
-                </tr>
-            </thead>
-            <%
-                VendedorDAO dao = new VendedorDAO();
-                List<Vendedor> list = dao.listar();
-                Iterator<Vendedor> iter = list.iterator();
-                Vendedor tab = null;
-                while (iter.hasNext()) {//No cerrar este corchete
-                    tab = iter.next();
-            %>
-            <tbody>
-                <tr>
-                    <td><%= tab.getIdVendedor()%></td>
-                    <td><%= tab.getIdUsuarios_Fk()%></td>
-                    <td><%= tab.getNum_Ventas()%></td>
-                    <td><%= tab.getComision()%></td>
-                    <td>
-                        <a href="Controlador_Vendedor?accion=editar&id=<%= tab.getIdVendedor()%>">Editar</a>
-                        <a href="Controlador_Vendedor?accion=eliminar&id=<%= tab.getIdVendedor()%>">Eliminar</a> 
-                    </td>
-                </tr>
-                <%}%>
-            </tbody>
-        </table>
+        <div class="container">
+            <h1>Listado de Vendedor</h1>
+            <a class="btn btn-success btn-sm" href="Controlador_Vendedor?accion=add">Agregar Nuevo</a><br>
+            <br>
+            <table class="table table-bordered" border="1">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id vendedor</th>
+                        <th>Id usuarios</th>
+                        <th>Numero de ventas</th>
+                        <th>Comision</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <%
+                    VendedorDAO dao = new VendedorDAO();
+                    List<Vendedor> list = dao.listar();
+                    Iterator<Vendedor> iter = list.iterator();
+                    Vendedor tab = null;
+                    while (iter.hasNext()) {//No cerrar este corchete
+                        tab = iter.next();
+                %>
+                <tbody>
+                    <tr>
+                        <td><%= tab.getIdVendedor()%></td>
+                        <td><%= tab.getIdUsuarios_Fk()%></td>
+                        <td><%= tab.getNum_Ventas()%></td>
+                        <td><%= tab.getComision()%></td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="Controlador_Vendedor?accion=editar&id=<%= tab.getIdVendedor()%>">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="Controlador_Vendedor?accion=eliminar&id=<%= tab.getIdVendedor()%>">Eliminar</a> 
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
     </div><!--1 Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->

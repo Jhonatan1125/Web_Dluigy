@@ -18,43 +18,46 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <h1>Listado de Proveedor</h1>
-        <a href="Controlador_Proveedor?accion=add">Agregar Nuevo</a><br>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Id del proveedor</th>
-                    <th>Nombre del proveedor</th>
-                    <th>Correo del proveedor</th>
-                    <th>Telefono del proveedor</th>
-                    <th>Direccion del proveedor</th>
-                    <th>OPCIONES</th>
-                </tr>
-            </thead>
-            <%
-                ProveedorDAO dao = new ProveedorDAO();
-                List<Proveedor> list = dao.listar();
-                Iterator<Proveedor> iter = list.iterator();
-                Proveedor tab = null;
-                while (iter.hasNext()) {//No cerrar este corchete
-                    tab = iter.next();
-            %>
-            <tbody>
-                <tr>
-                    <td><%= tab.getIdProveedor()%></td>
-                    <td><%= tab.getNom_Prove()%></td>
-                    <td><%= tab.getCorreo_Prove()%></td>
-                    <td><%= tab.getTelefono_Prove()%></td>
-                    <td><%= tab.getDireccion_Prove()%></td>
-                    <td>
-                        <a href="Controlador_Proveedor?accion=editar&id=<%= tab.getIdProveedor()%>">Editar</a>
-                        <a href="Controlador_Proveedor?accion=eliminar&id=<%= tab.getIdProveedor()%>">Eliminar</a>
-                    </td>
-                </tr>
-                <%}%>
-            </tbody>
-        </table>
-    </div><!--1 Esto hace parte de Menu.jsp-->
+        <div class="container">
+            <h1>Listado de Proveedor</h1>
+            <a class="btn btn-success btn-sm" href="Controlador_Proveedor?accion=add">Agregar Nuevo</a><br>
+            <br>
+            <table class="table table-bordered" border="1">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id del proveedor</th>
+                        <th>Nombre del proveedor</th>
+                        <th>Correo del proveedor</th>
+                        <th>Telefono del proveedor</th>
+                        <th>Direccion del proveedor</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <%
+                    ProveedorDAO dao = new ProveedorDAO();
+                    List<Proveedor> list = dao.listar();
+                    Iterator<Proveedor> iter = list.iterator();
+                    Proveedor tab = null;
+                    while (iter.hasNext()) {//No cerrar este corchete
+                        tab = iter.next();
+                %>
+                <tbody>
+                    <tr>
+                        <td><%= tab.getIdProveedor()%></td>
+                        <td><%= tab.getNom_Prove()%></td>
+                        <td><%= tab.getCorreo_Prove()%></td>
+                        <td><%= tab.getTelefono_Prove()%></td>
+                        <td><%= tab.getDireccion_Prove()%></td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="Controlador_Proveedor?accion=editar&id=<%= tab.getIdProveedor()%>">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="Controlador_Proveedor?accion=eliminar&id=<%= tab.getIdProveedor()%>">Eliminar</a>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+</div><!--1 Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->

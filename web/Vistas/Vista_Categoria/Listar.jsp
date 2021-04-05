@@ -13,38 +13,41 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <h1>Listado de Categoria</h1>
-        <a href="Controlador_Categoria?accion=add">Agregar Nuevo</a><br>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Idcategoria</th>
-                    <th>Nombre de Categoria</th>
-                    <th>Descripcion</th>
-                    <th>OPCIONES</th>
-                </tr>
-            </thead>
-            <% 
-                CategoriaDAO dao = new CategoriaDAO();
-                List<Categoria> list = dao.listar();
-                Iterator<Categoria> iter = list.iterator();
-                Categoria tab = null;
-                while (iter.hasNext()) {//No cerrar este corchete
-                    tab = iter.next();
-            %>
-            <tbody>
-                <tr>
-                    <td><%= tab.getIdCategoria()%></td>
-                    <td><%= tab.getNom_Categoria()%></td>
-                    <td><%= tab.getDescripcion()%></td>
-                    <td>
-                        <a href="Controlador_Categoria?accion=editar&id=<%= tab.getIdCategoria()%>">Editar</a>
-                        <a href="Controlador_Categoria?accion=eliminar&id=<%= tab.getIdCategoria()%>">Eliminar</a>
-                    </td>
-                </tr>
-                <%}%>
-            </tbody>
-        </table>
+        <div class="container">
+            <h1>Listado de Categoria</h1>
+            <a class="btn btn-success btn-sm" href="Controlador_Categoria?accion=add">Agregar Nuevo</a><br>
+            <br>
+            <table class="table table-bordered" border="1">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Idcategoria</th>
+                        <th>Nombre de Categoria</th>
+                        <th>Descripcion</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <%
+                    CategoriaDAO dao = new CategoriaDAO();
+                    List<Categoria> list = dao.listar();
+                    Iterator<Categoria> iter = list.iterator();
+                    Categoria tab = null;
+                    while (iter.hasNext()) {//No cerrar este corchete
+                        tab = iter.next();
+                %>
+                <tbody>
+                    <tr>
+                        <td><%= tab.getIdCategoria()%></td>
+                        <td><%= tab.getNom_Categoria()%></td>
+                        <td><%= tab.getDescripcion()%></td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="Controlador_Categoria?accion=editar&id=<%= tab.getIdCategoria()%>">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="Controlador_Categoria?accion=eliminar&id=<%= tab.getIdCategoria()%>">Eliminar</a>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
     </div><!--1 Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->

@@ -18,38 +18,41 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <h1>Listado de Roles</h1>
-        <a href="Controlador_Rol?accion=add">Agregar Nuevo</a><br>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>IdRol</th>
-                    <th>Nom_Rol</th>
-                    <th>Descripcion</th>
-                    <th>OPCIONES</th>
-                </tr>
-            </thead>
-            <%
-                RolDAO dao = new RolDAO();
-                List<Rol> list = dao.listar();
-                Iterator<Rol> iter = list.iterator();
-                Rol tab = null;
-                while (iter.hasNext()) {//No cerrar este corchete
-                    tab = iter.next();
-            %>
-            <tbody>
-                <tr>
-                    <td><%= tab.getIdRol()%></td>
-                    <td><%= tab.getNom_Rol()%></td>
-                    <td><%= tab.getDescripcion()%></td>
-                    <td>
-                        <a href="Controlador_Rol?accion=editar&id=<%= tab.getIdRol()%>">Editar</a>
-                        <a href="Controlador_Rol?accion=eliminar&id=<%= tab.getIdRol()%>">Eliminar</a>
-                    </td>
-                </tr>
-                <%}%>
-            </tbody>
-        </table>
+        <div class="container">
+            <h1>Listado de Roles</h1>
+            <a class="btn btn-success btn-sm" href="Controlador_Rol?accion=add">Agregar Nuevo</a><br>
+            <br>
+            <table class="table table-bordered" border="1">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>IdRol</th>
+                        <th>Nom_Rol</th>
+                        <th>Descripcion</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <%
+                    RolDAO dao = new RolDAO();
+                    List<Rol> list = dao.listar();
+                    Iterator<Rol> iter = list.iterator();
+                    Rol tab = null;
+                    while (iter.hasNext()) {//No cerrar este corchete
+                        tab = iter.next();
+                %>
+                <tbody>
+                    <tr>
+                        <td><%= tab.getIdRol()%></td>
+                        <td><%= tab.getNom_Rol()%></td>
+                        <td><%= tab.getDescripcion()%></td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="Controlador_Rol?accion=editar&id=<%= tab.getIdRol()%>">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="Controlador_Rol?accion=eliminar&id=<%= tab.getIdRol()%>">Eliminar</a>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
     </div><!--1 Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->

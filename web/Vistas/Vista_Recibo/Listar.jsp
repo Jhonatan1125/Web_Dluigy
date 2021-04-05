@@ -18,42 +18,45 @@
     </head>
     <body>
         <jsp:include page="../../Menu.jsp" />
-        <h1>Listado de Recibo</h1>
-        <a href="Controlador_Recibo?accion=add">Agregar Nuevo</a><br>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Id Recibo</th>
-                    <th>Id Vendedor</th>
-                    <th>Id Cliente</th>
-                    <th>Fecha Recibo</th>
-                    <th>Total</th>
-                    <th>OPCIONES</th>
-                </tr>
-            </thead>
-            <%
-                ReciboDAO dao = new ReciboDAO();
-                List<Recibo> list = dao.listar();
-                Iterator<Recibo> iter = list.iterator();
-                Recibo tab = null;
-                while (iter.hasNext()) {//No cerrar este corchete
-                    tab = iter.next();
-            %>
-            <tbody>
-                <tr>
-                    <td><%= tab.getIdRecibo()%></td>
-                    <td><%= tab.getIdVendedor_Fk()%></td>
-                    <td><%= tab.getIdCliente_Fk()%></td>
-                    <td><%= tab.getFech_Recibo()%></td>
-                    <td><%= tab.getTotal()%></td>
-                    <td>
-                        <a href="Controlador_Recibo?accion=editar&id=<%= tab.getIdRecibo()%>">Editar</a>
-                        <a href="Controlador_Recibo?accion=eliminar&id=<%= tab.getIdRecibo()%>">Eliminar</a>
-                    </td>
-                </tr>
-                <%}%>
-            </tbody>
-        </table>
+        <div class="container">
+            <h1>Listado de Recibo</h1>
+            <a class="btn btn-success btn-sm" href="Controlador_Recibo?accion=add">Agregar Nuevo</a><br>
+            <br>
+            <table class="table table-bordered" border="1">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id Recibo</th>
+                        <th>Id Vendedor</th>
+                        <th>Id Cliente</th>
+                        <th>Fecha Recibo</th>
+                        <th>Total</th>
+                        <th>OPCIONES</th>
+                    </tr>
+                </thead>
+                <%
+                    ReciboDAO dao = new ReciboDAO();
+                    List<Recibo> list = dao.listar();
+                    Iterator<Recibo> iter = list.iterator();
+                    Recibo tab = null;
+                    while (iter.hasNext()) {//No cerrar este corchete
+                        tab = iter.next();
+                %>
+                <tbody>
+                    <tr>
+                        <td><%= tab.getIdRecibo()%></td>
+                        <td><%= tab.getIdVendedor_Fk()%></td>
+                        <td><%= tab.getIdCliente_Fk()%></td>
+                        <td><%= tab.getFech_Recibo()%></td>
+                        <td><%= tab.getTotal()%></td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="Controlador_Recibo?accion=editar&id=<%= tab.getIdRecibo()%>">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="Controlador_Recibo?accion=eliminar&id=<%= tab.getIdRecibo()%>">Eliminar</a>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
     </div><!--1 Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->
 </div><!-- Esto hace parte de Menu.jsp-->
