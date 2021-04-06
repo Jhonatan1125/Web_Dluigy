@@ -38,7 +38,7 @@
                                     class="fas fa-file-invoice-dollar"></i></a>
                             <div id="item-3" class="collapse">
                                 <ul class="nav flex-column ml-3">
-                                    <c:if test="${Rol.equals('Vendedor') || Rol.equals('Cliente') }">
+                                    <c:if test="${Rol.equals('Vendedor') || Rol.equals('Cliente') || Rol.equals('Admin') }">
                                     <li class="nav-item">
                                         <a href="#" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Reporte de ventas</a>
                                     </li>
