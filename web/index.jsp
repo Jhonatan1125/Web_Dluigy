@@ -10,7 +10,7 @@
         <h1>Pagina de inicio</h1>
         <div>
             
-            <a href="Admin.jsp">Interfaz admin</a>
+            
       
    
             
