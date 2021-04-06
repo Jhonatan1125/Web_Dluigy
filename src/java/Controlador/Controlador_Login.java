@@ -36,7 +36,7 @@ public class Controlador_Login extends HttpServlet {
         Sesion metodos =  new Sesion();
         String txtUsuario = request.getParameter("txtUsuario");
         String txtClave = request.getParameter("txtClave");
-        
+        String Rol;
         
         out.println("<!DOCTYPE html>");
         out.println("<html>");
@@ -48,18 +48,26 @@ public class Controlador_Login extends HttpServlet {
         switch (iniciarSesion) {
             case "Admin":
                 out.println("alert('¡Bienvenido a Dluigy!\\niniciaste Sesion como "+txtUsuario+"\\nCon el Rol "+iniciarSesion+"')");
-                out.println("location='Admin.jsp'");
+                Rol = iniciarSesion;
+                request.setAttribute("Rol", Rol);
+                request.getRequestDispatcher("Admin.jsp").forward(request, response);
+                //out.println("location='Admin.jsp'");
                 break;
             case "Vendedor":
                 out.println("alert('¡Bienvenido a Dluigy!\\niniciaste Sesion como "+txtUsuario+"\\nCon el Rol "+iniciarSesion+"')");
-                out.println("location='Vendedor.jsp'");
+                Rol = iniciarSesion;
+                request.setAttribute("Rol", Rol);
+                request.getRequestDispatcher("Admin.jsp").forward(request, response);
+                request.getRequestDispatcher("Menu.jsp");
                 break;
             case "Cliente":
                 out.println("alert('¡Bienvenido a Dluigy!\\niniciaste Sesion como "+txtUsuario+"\\nCon el Rol "+iniciarSesion+"')");
-                out.println("location='Cliente.jsp'");
+                Rol = iniciarSesion;
+                request.setAttribute("Rol", Rol);
+                request.getRequestDispatcher("Admin.jsp").forward(request, response);
                 break;
             default:
-                out.println("alert('Datos Incorrectos, Verifica los datos o registrate :)')");
+                out.println("alert('Datos Incorrectos, Verifica los datos o registrate :)')");  
                 out.println("location='registro.jsp'");
                 break;
         }
