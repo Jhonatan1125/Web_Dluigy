@@ -7,7 +7,17 @@
         <title>Informacion Dluigy</title>
     </head>
     <body>
+        
         <jsp:include page="Nav.jsp" />
+          <div class="traductor" style="padding: 5px;
+                 position: absolute;
+                
+                 left: 10px;
+                 ">
+                <a href="#">
+                    <div id="google_translate_element"></div>
+                </a>
+            </div>
         <!--INICIO DEL CUERPO-->
         <section id="objetivo">
             <div class="container-fluid">
@@ -57,8 +67,15 @@
                 </div>
             </div>
         </section>
+        <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+        </script>
         <!--FIN DEL CUERPO-->
         <jsp:include page="Footer.jsp"  /><!--Ya incluye el boostrap 4 -->
-        
+         
     </body>
 </html>
