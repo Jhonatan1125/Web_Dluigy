@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Controlador;
 
 import ModeloDAO.Sesion;
@@ -13,10 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author JHsan
- */
+
 public class Controlador_Login extends HttpServlet {
 
     /**
@@ -51,6 +44,7 @@ public class Controlador_Login extends HttpServlet {
                 Rol = iniciarSesion;
                 request.setAttribute("Rol", Rol);
                 request.getRequestDispatcher("Admin.jsp").forward(request, response);
+                
                 //out.println("location='Admin.jsp'");
                 break;
             case "Vendedor":
@@ -58,7 +52,6 @@ public class Controlador_Login extends HttpServlet {
                 Rol = iniciarSesion;
                 request.setAttribute("Rol", Rol);
                 request.getRequestDispatcher("Admin.jsp").forward(request, response);
-                request.getRequestDispatcher("Menu.jsp");
                 break;
             case "Cliente":
                 out.println("alert('¡Bienvenido a Dluigy!\\niniciaste Sesion como "+txtUsuario+"\\nCon el Rol "+iniciarSesion+"')");

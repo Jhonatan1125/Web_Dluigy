@@ -1,9 +1,4 @@
-<%-- 
-    Document   : Listar
-    Created on : 4/04/2021, 11:29:47 AM
-    Author     : jorda
---%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="java.util.Iterator"%>
 <%@page import="Modelo.Producto"%>
 <%@page import="Modelo.Producto"%>
@@ -18,13 +13,19 @@
         <link href="Contenido/css/estilo5.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        
         <jsp:include page="../../Menu.jsp" />
+        
         <div class="container-fluid">
-            <a href="Controlador_Inventario?accion=listar">Inventario</a>
-            <a href="Controlador_Categoria?accion=listar">Categoria</a>
+            
+            <a href="Controlador_Inventario?accion=listar" class="btn btn-info">Inventario</a>
+            <a href="Controlador_Categoria?accion=listar" class="btn btn-info">Categoria</a>
+            
             <h1>Listado de Producto</h1>
-            <a class="btn btn-success btn-sm" href="Controlador_Producto?accion=add">Agregar Nuevo</a><br>
-            <a class="btn btn-info btn-sm" href="Controlador_Producto?accion=reporte">Reporte Producto</a><br>
+            <div style="width: 100%; text-align: right;">
+            <a class="btn btn-info btn-sm" href="Controlador_Producto?accion=reporte">Reporte Producto <i class="fas fa-file-pdf"></i></a>
+            <a class="btn btn-success btn-sm" href="Controlador_Producto?accion=add">Agregar Nuevo</a>
+            </div>
             <br>
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">

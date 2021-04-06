@@ -15,7 +15,10 @@
         <jsp:include page="../../Menu.jsp" />
         <div class="container-fluid">
             <h1>Listado de Categoria</h1>
-            <a class="btn btn-success btn-sm" href="Controlador_Categoria?accion=add">Agregar Nuevo</a><br>
+            <div style="width: 100%; text-align: right;">
+                <a class="btn btn-success btn-sm" href="Controlador_Categoria?accion=add">Agregar Nuevo</a>
+            </div>
+            
             <br>
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">

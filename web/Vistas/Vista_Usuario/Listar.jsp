@@ -20,10 +20,13 @@
         <div>
             <jsp:include page="../../Menu.jsp" />
             <div class="container-fluid">
-                <a href="Controlador_Rol?accion=listar">Rol</a><br>
+                <a href="Controlador_Rol?accion=listar" class="btn btn-info">Rol</a><br>
                 <h1>Usuarios</h1>
-                <a class="btn btn-success btn-sm" href="Controlador_Usuario?accion=add">Agregar Nuevo</a><br>
-                <a class="btn btn-success btn-sm" href="Controlador_Usuario?accion=reporte">Reporte Usuarios</a><br>
+
+                <div style="width: 100%; text-align: right;">
+                    <a class="btn btn-success btn-sm" href="Controlador_Usuario?accion=reporte">Reporte Usuarios <i class="fas fa-file-pdf"></i></a>
+                    <a class="btn btn-success btn-sm" href="Controlador_Usuario?accion=add">Agregar Nuevo</a>
+                </div>
                 <br>
                 <table class="table table-bordered" border="1">
                     <thead class="thead-dark">

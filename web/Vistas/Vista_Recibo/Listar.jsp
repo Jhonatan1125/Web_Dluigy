@@ -1,9 +1,4 @@
-<%-- 
-    Document   : Listar
-    Created on : 3/04/2021, 03:25:23 PM
-    Author     : jorda
---%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="java.util.Iterator"%>
 <%@page import="Modelo.Recibo"%>
 <%@page import="java.util.List"%>
@@ -20,8 +15,11 @@
         <jsp:include page="../../Menu.jsp" />
         <div class="container-fluid">
             <h1>Listado de Recibo</h1>
-            <a class="btn btn-success btn-sm" href="Controlador_Recibo?accion=add">Agregar Nuevo</a><br>
-              <a class="btn btn-info btn-sm" href="Controlador_Recibo?accion=reporte">Reporte Recibo</a><br>
+
+            <div style="width: 100%; text-align: right;">
+                <a class="btn btn-info btn-sm" href="Controlador_Recibo?accion=reporte">Reporte Recibo <i class="fas fa-file-pdf"></i></a>
+                <a class="btn btn-success btn-sm" href="Controlador_Recibo?accion=add">Agregar Nuevo</a>
+            </div>
             <br>
             <table class="table table-bordered" border="1">
                 <thead class="thead-dark">
