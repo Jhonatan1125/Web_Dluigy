@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--INICIO DEL CUERPO-->
+
 <div class="container-fluid" > 
     <div class="row C-medidas">
 
@@ -38,14 +39,19 @@
                                         class="fas fa-file-invoice-dollar"></i></a>
                                 <div id="item-3" class="collapse">
                                     <ul class="nav flex-column ml-3">
-                                        <c:if test="${Rol.equals('Vendedor') || Rol.equals('Cliente') || Rol.equals('Admin') }">
+                                        <c:if test="${Rol.equals('Cliente') }">
                                             <li class="nav-item">
-                                                <a href="#" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Reporte de ventas</a>
+                                                <a href="#" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Reporte de Compras</a>
                                             </li>
                                         </c:if>
                                         <c:if test="${Rol.equals('Vendedor') || Rol.equals('Admin') }">
                                             <li class="nav-item">
                                                 <a href="Controlador_Recibo?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Informacion de recibos-(producto_recibo)</a>
+                                            </li>
+                                        </c:if>
+                                        <c:if test="${Rol.equals('Admin') }">
+                                            <li class="nav-item">
+                                                <a href="" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Reporte de ventas</a>
                                             </li>
                                         </c:if>
                                     </ul>

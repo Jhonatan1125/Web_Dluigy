@@ -9,10 +9,12 @@
     </head>
     <body>
         <jsp:include page="Menu.jsp" />
+            
 
         <c:forEach items="${Rol}" var="Rol" >   
             <h3>Rol: ${Rol}</h3>   
         </c:forEach>    
+            
             
             
 

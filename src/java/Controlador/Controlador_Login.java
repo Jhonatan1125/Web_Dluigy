@@ -51,13 +51,15 @@ public class Controlador_Login extends HttpServlet {
                 out.println("alert('¡Bienvenido a Dluigy!\\niniciaste Sesion como "+txtUsuario+"\\nCon el Rol "+iniciarSesion+"')");
                 Rol = iniciarSesion;
                 request.setAttribute("Rol", Rol);
-                request.getRequestDispatcher("Admin.jsp").forward(request, response);
+                request.getRequestDispatcher("").forward(request, response);
+                
                 break;
             case "Cliente":
                 out.println("alert('¡Bienvenido a Dluigy!\\niniciaste Sesion como "+txtUsuario+"\\nCon el Rol "+iniciarSesion+"')");
                 Rol = iniciarSesion;
                 request.setAttribute("Rol", Rol);
                 request.getRequestDispatcher("Admin.jsp").forward(request, response);
+               
                 break;
             default:
                 out.println("alert('Datos Incorrectos, Verifica los datos o registrate :)')");  
