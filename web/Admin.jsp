@@ -1,11 +1,11 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <jsp:include page="Head.jsp" />
         <link href="Contenido/css/estilo5.css" rel="stylesheet" type="text/css"/>
-        <title>JSP Page</title>
+        <title>Admin</title>
     </head>
     <body>
         <jsp:include page="Menu.jsp" />
