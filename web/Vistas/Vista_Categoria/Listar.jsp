@@ -1,4 +1,3 @@
-
 <%@page import="java.util.Iterator"%>
 <%@page import="Modelo.Categoria"%>
 <%@page import="java.util.List"%>
