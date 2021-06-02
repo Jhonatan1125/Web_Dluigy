@@ -27,7 +27,9 @@ ORDER BY
 			<band height="38">
 				<textField>
 					<reportElement x="0" y="15" width="131" height="20" uuid="19e5bb30-fca2-4050-9042-3dc138ec2fdb"/>
-					<textElement textAlignment="Center"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial"/>
+					</textElement>
 					<textFieldExpression><![CDATA[$F{recibo_IdRecibo}]]></textFieldExpression>
 				</textField>
 			</band>
@@ -43,22 +45,29 @@ ORDER BY
 		<band height="79" splitType="Stretch">
 			<textField>
 				<reportElement x="435" y="0" width="80" height="20" uuid="690dd57b-d11f-4317-af1d-101a9659e9ae"/>
-				<textElement textAlignment="Right"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
 				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
 				<reportElement x="515" y="0" width="40" height="20" uuid="f873ff46-0d39-4a38-b9f6-11fab668ae28"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd/MM/yyyy">
 				<reportElement x="445" y="20" width="110" height="20" uuid="94efd11f-6f18-43d0-8162-3ed6d5b07e9a"/>
-				<textElement textAlignment="Center"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="84" y="0" width="361" height="65" uuid="f6e7c554-677a-446f-bb82-90211dda6187"/>
 				<textElement textAlignment="Center">
-					<font fontName="MV Boli" size="20" isBold="true"/>
+					<font fontName="Arial" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[REPORTE DE RECIBO D'LUIGY]]></text>
 			</staticText>
@@ -69,7 +78,7 @@ ORDER BY
 			<staticText>
 				<reportElement x="174" y="0" width="184" height="20" forecolor="#FF66FF" uuid="318ade80-8193-45e2-9f40-b401000f7f00"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[REPORTE GENERAL RECIBO]]></text>
 			</staticText>
@@ -79,22 +88,30 @@ ORDER BY
 		<band height="61" splitType="Stretch">
 			<staticText>
 				<reportElement mode="Opaque" x="1" y="1" width="130" height="60" forecolor="#FFFFFF" backcolor="#660066" uuid="049fde63-4888-4adb-9e7e-49d8c5959e74"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
 				<text><![CDATA[Id Vendedor]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="131" y="1" width="130" height="60" forecolor="#FFFFFF" backcolor="#660066" uuid="a70fc30c-5253-4335-9d49-6e063fe098cc"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
 				<text><![CDATA[Id Cliente]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="261" y="1" width="151" height="60" forecolor="#FFFFFF" backcolor="#660066" uuid="463c7c3d-8e0e-475d-afe4-7f2cdbe4dfca"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
 				<text><![CDATA[Fecha]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="412" y="1" width="143" height="60" forecolor="#FFFFFF" backcolor="#660066" uuid="1027fdf3-408d-4678-88f5-51f8f53c1a14"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 		</band>
@@ -103,22 +120,30 @@ ORDER BY
 		<band height="35" splitType="Stretch">
 			<textField>
 				<reportElement x="1" y="11" width="130" height="20" uuid="120bbe25-a8d8-4648-98fc-0fd2666b4e34"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{recibo_IdVendedor_Fk}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="131" y="11" width="130" height="20" uuid="da3f0794-b060-4a92-8bde-2c0849ffd26b"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{recibo_IdCliente_Fk}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="261" y="11" width="151" height="20" uuid="7043deeb-f573-426b-8f00-5c4ce758c282"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{recibo_Fech_Recibo}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="412" y="11" width="143" height="20" uuid="24ff2931-99b8-4181-8e04-bca4a75e182c"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{recibo_Total}]]></textFieldExpression>
 			</textField>
 		</band>
