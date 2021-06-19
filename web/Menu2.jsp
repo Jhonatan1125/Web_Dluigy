@@ -1,4 +1,4 @@
-<!-- Menu admin -->
+<!-- Menu Vendedor -->
 <div class="col-md-2">
     <div class="row menu-lateral">
         <div class="col-md-12 col-sm-1 text-center logo-menu-lateral">
@@ -10,35 +10,10 @@
 
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item text-center">
-
-                    <a class="nav-link" data-toggle="collapse" href="#item-2">INVENTARIO <i
-                            class="fas fa-dolly-flatbed"></i></a>
-                    <div id="item-2" class="collapse">
-                        <ul class="nav flex-column ml-3">
-                            <li class="nav-item">
-                                <a  href="Controlador_Producto?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Productos-(inventario,categoria)</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="Controlador_Proveedor?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Proveedor</a>
-
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-
-
-            <ul class="nav nav-pills flex-column">
-                <li class="nav-item text-center">
                     <a class="nav-link" data-toggle="collapse" href="#item-3">VENTAS <i
                             class="fas fa-file-invoice-dollar"></i></a>
                     <div id="item-3" class="collapse">
                         <ul class="nav flex-column ml-3">
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Reporte de Compras</a>
-                            </li>
-
                             <li class="nav-item">
                                 <a href="Controlador_Recibo?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Informacion de recibos-(producto_recibo)</a>
                             </li>
@@ -46,7 +21,6 @@
                             <li class="nav-item">
                                 <a href="Informe.jsp" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Reporte de ventas</a>
                             </li>
-
                         </ul>
                     </div>
                 </li>
@@ -60,33 +34,9 @@
                         <ul class="nav flex-column ml-3" style="padding: 0px;">
 
                             <li class="nav-item">
-                                <a href="Controlador_Usuario?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Registrados-(ROL)</a>
-                            </li>
-
-                            <li class="nav-item">
                                 <a href="Controlador_Cliente?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Cliente-(Fidelizacion)</a>
                             </li>
 
-
-                            <li class="nav-item">
-                                <a href="Controlador_Vendedor?accion=listar" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Vendedor</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-
-            <ul class="nav nav-pills flex-column">
-                <li class="nav-item text-center">
-                    <a class="nav-link" data-toggle="collapse" href="#item-5">CORREO <i class="fas fa-envelope-open-text"></i>
-
-                    </a>
-                    <div id="item-5" class="collapse">
-                        <ul class="nav flex-column ml-3" style="padding: 0px;">
-                            <li class="nav-item">
-                                <a href="FormEmail.jsp" class="nav-link"><i class="fas fa-arrow-circle-right"></i>Enviar Correo</a>
-                            </li>
                         </ul>
                     </div>
                 </li>

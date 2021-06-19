@@ -5,16 +5,33 @@
         <jsp:include page="Head.jsp" />
         <link href="Contenido/css/estilo5.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Vendedor</title>
-        
+        <title>Vendedor</title>  
     </head>
     <body>
-       <jsp:include page="Menu.jsp" />
-            
+       <div class="container-fluid" > 
+            <div class="row C-medidas">
+                <jsp:include page="Menu2.jsp" />
+                <div class="col-md-10">
+                    <div class="row" id="Contenido-Administrador">
 
-        <c:forEach items="${Rol}" var="Rol" >   
-            <h3>Rol: ${Rol}</h3>   
-        </c:forEach>    
+                        <div class="col-md-12" style="border: 2px solid #737373;">
+
+
+                            
+                            <div class="container-fluid">
+
+
+                                <c:forEach items="${Rol}" var="Rol" >   
+                                    <h3>Rol: ${Rol}</h3>   
+                                </c:forEach>    
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
             
             
             
