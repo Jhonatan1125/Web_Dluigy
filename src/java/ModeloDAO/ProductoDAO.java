@@ -17,6 +17,8 @@ public class ProductoDAO implements ProductoCRUD {
     PreparedStatement ps;
     ResultSet rs;
     Producto ent = new Producto();
+    
+    
 
     @Override
     public List listar() {
@@ -68,8 +70,8 @@ public class ProductoDAO implements ProductoCRUD {
 
             }
         } catch (SQLException e) {
-
-        }
+            System.out.println("Error: " + e.getMessage());
+        } 
         return ent;
     }
 
@@ -82,7 +84,7 @@ public class ProductoDAO implements ProductoCRUD {
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Error: " + e);
+            System.out.println("Error: " + e.getMessage());
         }
         return false;
     }
@@ -96,7 +98,7 @@ public class ProductoDAO implements ProductoCRUD {
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Error: " + e);
+            System.out.println("Error: " + e.getMessage());
         }
         return false;
     }
@@ -109,7 +111,7 @@ public class ProductoDAO implements ProductoCRUD {
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Error: " + e);
+            System.out.println("Error: " + e.getMessage());
         }
         return false;
     }

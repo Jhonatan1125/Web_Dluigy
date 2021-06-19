@@ -34,14 +34,16 @@ public class RolDAO implements RolCRUD {
                 list.add(tab);
             }
         } catch (SQLException e) {
-            System.out.println("Error " + e);
-        }
+            System.out.println("Error al listar" + e);
+        } /*finally {
+            cn.cerrar();
+        }*/
         return list;
     }
 
     @Override
     public Rol list(int id) {
-        String sql = "Select * from Rol where IdRol="+id;
+        String sql = "Select * from Rol where IdRol=" + id;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -52,7 +54,10 @@ public class RolDAO implements RolCRUD {
                 ent.setDescripcion(rs.getString("Descripcion"));
             }
         } catch (SQLException e) {
-        }
+            System.out.println("Error al listar ID" + e);
+        } /*finally {
+            cn.cerrar();
+        }*/
         return ent;
 
     }
@@ -65,8 +70,10 @@ public class RolDAO implements RolCRUD {
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Error: " + e);
-        }
+            System.out.println("Error al añadir: " + e);
+        } /*finally {
+            cn.cerrar();
+        }*/
         return false;
     }
 
@@ -79,21 +86,25 @@ public class RolDAO implements RolCRUD {
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Error: " + e);
-        }
+            System.out.println("Error al actualizar: " + e);
+        } /*finally {
+            cn.cerrar();
+        }*/
         return false;
     }
 
     @Override
     public boolean eliminar(int id) {
-        String sql="delete from Rol where IdRol="+id;
+        String sql = "delete from Rol where IdRol=" + id;
         try {
-            con=cn.getConnection();
-            ps=con.prepareStatement(sql);
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Error: " + e);
-        }
+            System.out.println("Error al eliminar: " + e.getMessage());
+        } /*finally {
+            cn.cerrar();
+        }*/
         return false;
     }
 

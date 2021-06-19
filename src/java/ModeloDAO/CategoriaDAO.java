@@ -36,7 +36,7 @@ public class CategoriaDAO implements CategoriaCRUD {
                 list.add(tab);
             }
         } catch (SQLException e) {
-            System.out.println("Error " + e);
+            System.out.println("Error " + e.getMessage());
         }
         return list;
     }

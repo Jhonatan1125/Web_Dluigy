@@ -109,7 +109,7 @@ public class Controlador_Usuario extends HttpServlet {
             dao.eliminar(id);
             acceso = listar;
         }else if (action.equalsIgnoreCase("reporte")) {
-            request.getRequestDispatcher("Vistas/Vista_Usuario/Reporte_Usuarios.jsp").forward(request,response);
+            request.getRequestDispatcher("Vistas/Vista_Usuario/Reporte_Usu.jsp").forward(request,response);
         }
         RequestDispatcher vista = request.getRequestDispatcher(acceso);
         vista.forward(request, response);

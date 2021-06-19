@@ -63,7 +63,7 @@ public class Controlador_Login extends HttpServlet {
                 break;
             default:
                 out.println("alert('Datos Incorrectos, Verifica los datos o registrate :)')");  
-                out.println("location='registro.jsp'");
+                out.println("location='Login.jsp'");
                 break;
         }
         

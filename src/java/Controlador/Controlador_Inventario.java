@@ -90,6 +90,8 @@ public class Controlador_Inventario extends HttpServlet {
             u.setIdInventario(idCap);
             dao.eliminar(idCap);
             acceso = listar;
+        } else if (action.equalsIgnoreCase("reporte")) {
+            request.getRequestDispatcher("Vistas/Vista_Inventario/Reporte_Inv.jsp").forward(request,response);
         }
 
         RequestDispatcher vista = request.getRequestDispatcher(acceso);

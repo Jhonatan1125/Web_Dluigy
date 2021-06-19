@@ -111,7 +111,7 @@ public class Controlador_Producto extends HttpServlet {
             dao.eliminar(idCap);
             acceso = listar;
         }else if (action.equalsIgnoreCase("reporte")) {
-            request.getRequestDispatcher("Vistas/Vista_Producto/Reporte_Producto.jsp").forward(request,response);
+            request.getRequestDispatcher("Vistas/Vista_Producto/Reporte_Prod.jsp").forward(request,response);
         }
 
         RequestDispatcher vista = request.getRequestDispatcher(acceso);

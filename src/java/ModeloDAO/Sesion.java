@@ -45,19 +45,19 @@ public class Sesion {
                 System.out.println("Se realizo correctamente el registro");
             } else {
                 registro = false;
-                System.out.println("No se pudo realizar rl registro");
+                System.out.println("No se pudo realizar el registro");
             }
-            conexion.close();
+            /*conexion.close();*/
         } catch (SQLException e) {
             System.out.println("Error: " + e);
 
-        } finally {
+        } /*finally {
             try {
                 conexion.close();
             } catch (SQLException e) {
                 System.out.println("Error: " + e);
             }
-        }
+        }*/
 
         System.out.println("Valor del registro: " + registro);
         return registro;
@@ -79,17 +79,17 @@ public class Sesion {
                 usuarioRepetido = false;//Usuario no registrado
             }
 
-            conexion.close();
+            /*conexion.close();*/
 
         } catch (SQLException e) {
             System.out.println("Error: " + e);
-        } finally {
+        } /*finally {
             try {
                 conexion.close();
             } catch (SQLException e) {
                 System.out.println("Error: " + e);
             }
-        }
+        }*/
         System.out.println("El valor del usuario repetido es " + usuarioRepetido);
 
         return usuarioRepetido;
@@ -108,16 +108,16 @@ public class Sesion {
             while (resultado.next()) {                
                 iniciarSesion = resultado.getString("Nom_Rol");
             }
-            conexion.close();
+            /*conexion.close();*/
         } catch (SQLException e) {
             System.out.println("Error: "+e);
-        }finally{
+        }/* finally{
             try {
                 conexion.close();
             } catch (SQLException e) {
             System.out.println("Error: "+e);
             }
-        }
+        }*/
         
         System.out.println("El valor de sesion es: "+iniciarSesion);
         return iniciarSesion;

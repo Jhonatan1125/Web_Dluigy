@@ -52,17 +52,18 @@ public class Guardar extends HttpServlet {
 
         boolean usuarioRepetido = metodos.buscarUsuarioRepetidoBD(Correo);
         if (usuarioRepetido == true) {//el correo ya esta registrado
-            out.println("alert('¡Atencion!, el Correo " + Correo + " ya esta registrado en el sistema')");
             out.println("location='registro.jsp'");
+            out.println("alert('¡Atencion!, el Correo " + Correo + " ya esta registrado en el sistema')");
         } else {//el correo no esta registrado en el sistema
             boolean registro = metodos.registrarUsuario(P_nombre, S_nombre, P_apellido, S_apellido, telefono, nacimiento, Correo, Clave);
 
             if (registro == true) {
+                out.println("location='Login.jsp'");
                 out.println("alert('El usuario se ha registrado con exito')");
-                out.println("location='Login.jsp'");
             } else {
-                out.println("alert('Ocurrio un error al registrar al usuario')");
-                out.println("location='Login.jsp'");
+                 out.println("location='Login.jsp'");
+                 out.println("alert('Ocurrio un error al registrar al usuario')");
+               
 
             }
             System.out.println("El valor de registro es " + registro);
